@@ -1,0 +1,19 @@
+{
+  "id": "3.12",
+  "unit": 3,
+  "title": "Deadlock Avoidance (Banker's Algorithm)",
+  "zone": "vault",
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

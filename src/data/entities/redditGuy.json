@@ -1,0 +1,9 @@
+{
+  "id": "redditGuy",
+  "name": "Reddit Guy",
+  "role": "The Forum Node",
+  "description": "TBD",
+  "appearsIn": ["realm3-gauntlet", "realm4-archive"],
+  "personality": "perpetually sarcastic, low-priority",
+  "dialogue": []
+}

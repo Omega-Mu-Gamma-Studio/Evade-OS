@@ -1,0 +1,19 @@
+{
+  "id": "1.8",
+  "unit": 1,
+  "title": "System Programs, OS Generation & Boot",
+  "zone": null,
+  "presentationMode": "terminal",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

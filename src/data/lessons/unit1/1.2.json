@@ -1,0 +1,19 @@
+{
+  "id": "1.2",
+  "unit": 1,
+  "title": "Interrupts",
+  "zone": null,
+  "presentationMode": "terminal",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

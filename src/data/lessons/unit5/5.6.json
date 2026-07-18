@@ -1,0 +1,19 @@
+{
+  "id": "5.6",
+  "unit": 5,
+  "title": "Mobile OS \u2014 Android",
+  "zone": null,
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "3.7",
+  "unit": 3,
+  "title": "Real-Time Scheduling",
+  "zone": "gauntlet",
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

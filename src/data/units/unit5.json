@@ -1,0 +1,9 @@
+{
+  "realm": "The Bunker Core",
+  "zones": null,
+  "accent": {
+    "primary": "#00CCFF",
+    "secondary": "#FFFFFF",
+    "bg": "#0A0F14"
+  }
+}

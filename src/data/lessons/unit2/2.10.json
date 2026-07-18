@@ -1,0 +1,19 @@
+{
+  "id": "2.10",
+  "unit": 2,
+  "title": "Semaphores",
+  "zone": null,
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

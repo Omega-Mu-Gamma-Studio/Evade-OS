@@ -1,0 +1,19 @@
+{
+  "id": "2.12",
+  "unit": 2,
+  "title": "Critical Regions & Monitors",
+  "zone": null,
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

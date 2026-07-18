@@ -1,0 +1,47 @@
+/* Escape-OS — Design Tokens
+   Source: Kernel-ka's Bunker PRD v3.0, Section 5.3
+   Per-realm/zone accent palette. Cyberpunk ink-wash base.
+*/
+
+:root {
+  /* Shared base */
+  --ink-black: #000000;
+  --ink-white: #FFFFFF;
+  --font-ui: 'TBD', sans-serif;
+  --font-terminal: 'TBD', monospace;
+
+  /* Realm I — The Awakening */
+  --realm-1-primary: #00FFAA;
+  --realm-1-secondary: #FF00FF;
+  --realm-1-bg: #0A0A0F;
+
+  /* Realm II — The Process Forge */
+  --realm-2-primary: #33CCFF;
+  --realm-2-secondary: #FFAA00;
+  --realm-2-bg: #0A0F14;
+
+  /* Realm III, Zone A — The Scheduling Gauntlet */
+  --realm-3-gauntlet-primary: #FF5500;
+  --realm-3-gauntlet-secondary: #FFCC00;
+  --realm-3-gauntlet-bg: #1A0A05;
+
+  /* Realm III, Zone B — The Deadlock Vault */
+  --realm-3-vault-primary: #FF0033;
+  --realm-3-vault-secondary: #880011;
+  --realm-3-vault-bg: #1A0505;
+
+  /* Realm IV, Zone A — The Memory Tower */
+  --realm-4-tower-primary: #7700FF;
+  --realm-4-tower-secondary: #FF00AA;
+  --realm-4-tower-bg: #0F051A;
+
+  /* Realm IV, Zone B — The Archive */
+  --realm-4-archive-primary: #CC8844;
+  --realm-4-archive-secondary: #884422;
+  --realm-4-archive-bg: #1A120A;
+
+  /* Realm V — The Bunker Core */
+  --realm-5-primary: #00CCFF;
+  --realm-5-secondary: #FFFFFF;
+  --realm-5-bg: #0A0F14;
+}

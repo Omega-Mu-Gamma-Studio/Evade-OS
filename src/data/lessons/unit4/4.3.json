@@ -1,0 +1,19 @@
+{
+  "id": "4.3",
+  "unit": 4,
+  "title": "Paging",
+  "zone": "tower",
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

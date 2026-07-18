@@ -1,0 +1,19 @@
+{
+  "id": "5.1",
+  "unit": 5,
+  "title": "Virtual Machines",
+  "zone": null,
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

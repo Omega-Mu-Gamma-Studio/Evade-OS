@@ -1,0 +1,19 @@
+{
+  "id": "3.14",
+  "unit": 3,
+  "title": "Recovery from Deadlock",
+  "zone": "vault",
+  "presentationMode": "terminal",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

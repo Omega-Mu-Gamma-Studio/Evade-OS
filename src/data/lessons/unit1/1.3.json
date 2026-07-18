@@ -1,0 +1,19 @@
+{
+  "id": "1.3",
+  "unit": 1,
+  "title": "Memory Hierarchy & Cache",
+  "zone": null,
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

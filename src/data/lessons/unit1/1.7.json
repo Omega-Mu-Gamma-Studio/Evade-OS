@@ -1,0 +1,19 @@
+{
+  "id": "1.7",
+  "unit": 1,
+  "title": "OS Structure, Operations & System Calls",
+  "zone": null,
+  "presentationMode": "terminal",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

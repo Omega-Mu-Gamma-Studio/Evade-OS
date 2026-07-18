@@ -1,0 +1,19 @@
+{
+  "id": "1.5",
+  "unit": 1,
+  "title": "Multiprocessor & Multicore Organization",
+  "zone": null,
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

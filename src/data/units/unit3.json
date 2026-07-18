@@ -1,0 +1,22 @@
+{
+  "realm": "The Scheduling Gauntlet & Deadlock Vault",
+  "zones": {
+    "gauntlet": {
+      "name": "The Scheduling Gauntlet",
+      "accent": {
+        "primary": "#FF5500",
+        "secondary": "#FFCC00",
+        "bg": "#1A0A05"
+      }
+    },
+    "vault": {
+      "name": "The Deadlock Vault",
+      "accent": {
+        "primary": "#FF0033",
+        "secondary": "#880011",
+        "bg": "#1A0505"
+      }
+    }
+  },
+  "accent": null
+}

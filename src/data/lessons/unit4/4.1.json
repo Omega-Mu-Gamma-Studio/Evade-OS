@@ -1,0 +1,19 @@
+{
+  "id": "4.1",
+  "unit": 4,
+  "title": "Main Memory Background & Swapping",
+  "zone": "tower",
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

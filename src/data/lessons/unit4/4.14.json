@@ -1,0 +1,19 @@
+{
+  "id": "4.14",
+  "unit": 4,
+  "title": "Directory & Disk Structure / Directory Implementation",
+  "zone": "archive",
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

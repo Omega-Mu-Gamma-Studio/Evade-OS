@@ -1,0 +1,19 @@
+{
+  "id": "2.5",
+  "unit": 2,
+  "title": "Threads Overview & Multithreading Models",
+  "zone": null,
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "4.7",
+  "unit": 4,
+  "title": "Page Replacement",
+  "zone": "tower",
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

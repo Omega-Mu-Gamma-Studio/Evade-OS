@@ -1,0 +1,19 @@
+{
+  "id": "3.6",
+  "unit": 3,
+  "title": "Multiple-Processor Scheduling",
+  "zone": "gauntlet",
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

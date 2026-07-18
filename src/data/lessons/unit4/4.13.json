@@ -1,0 +1,19 @@
+{
+  "id": "4.13",
+  "unit": 4,
+  "title": "Swap-Space Management",
+  "zone": "archive",
+  "presentationMode": "terminal",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

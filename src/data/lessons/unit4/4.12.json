@@ -1,0 +1,19 @@
+{
+  "id": "4.12",
+  "unit": 4,
+  "title": "Disk Scheduling",
+  "zone": "archive",
+  "presentationMode": "terminal",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

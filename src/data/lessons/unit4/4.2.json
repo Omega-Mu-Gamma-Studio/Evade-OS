@@ -1,0 +1,19 @@
+{
+  "id": "4.2",
+  "unit": 4,
+  "title": "Contiguous Memory Allocation",
+  "zone": "tower",
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

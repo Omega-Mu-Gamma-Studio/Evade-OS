@@ -1,0 +1,16 @@
+{
+  "lessonId": "4.10",
+  "story": {
+    "observe": [],
+    "fault": [],
+    "repair": [],
+    "escape": []
+  },
+  "normal": {
+    "observe": [],
+    "fault": [],
+    "repair": [],
+    "escape": []
+  },
+  "hints": []
+}

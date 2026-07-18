@@ -1,0 +1,19 @@
+{
+  "id": "5.3",
+  "unit": 5,
+  "title": "Linux System",
+  "zone": null,
+  "presentationMode": "terminal",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

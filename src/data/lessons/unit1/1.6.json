@@ -1,0 +1,19 @@
+{
+  "id": "1.6",
+  "unit": 1,
+  "title": "OS Objectives, Functions & Evolution",
+  "zone": null,
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

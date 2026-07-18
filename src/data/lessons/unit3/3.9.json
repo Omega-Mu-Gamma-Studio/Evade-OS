@@ -1,0 +1,19 @@
+{
+  "id": "3.9",
+  "unit": 3,
+  "title": "Deadlock Characterization",
+  "zone": "vault",
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

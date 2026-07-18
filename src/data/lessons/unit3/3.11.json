@@ -1,0 +1,19 @@
+{
+  "id": "3.11",
+  "unit": 3,
+  "title": "Deadlock Prevention",
+  "zone": "vault",
+  "presentationMode": "terminal",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "4.6",
+  "unit": 4,
+  "title": "Virtual Memory & Demand Paging",
+  "zone": "tower",
+  "presentationMode": "terminal",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

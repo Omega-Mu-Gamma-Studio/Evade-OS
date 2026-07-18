@@ -1,0 +1,19 @@
+{
+  "id": "5.7",
+  "unit": 5,
+  "title": "The Final System Call",
+  "zone": null,
+  "presentationMode": "terminal",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

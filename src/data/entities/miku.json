@@ -1,0 +1,9 @@
+{
+  "id": "miku",
+  "name": "Miku",
+  "role": "The System Daemon",
+  "description": "TBD",
+  "appearsIn": ["realm3-gauntlet", "realm3-vault"],
+  "personality": "hyper-energetic, high-priority",
+  "dialogue": []
+}

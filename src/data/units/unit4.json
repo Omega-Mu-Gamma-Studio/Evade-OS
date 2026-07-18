@@ -1,0 +1,22 @@
+{
+  "realm": "The Storage Vault",
+  "zones": {
+    "tower": {
+      "name": "The Memory Tower",
+      "accent": {
+        "primary": "#7700FF",
+        "secondary": "#FF00AA",
+        "bg": "#0F051A"
+      }
+    },
+    "archive": {
+      "name": "The Archive",
+      "accent": {
+        "primary": "#CC8844",
+        "secondary": "#884422",
+        "bg": "#1A120A"
+      }
+    }
+  },
+  "accent": null
+}

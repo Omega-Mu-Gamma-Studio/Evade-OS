@@ -1,0 +1,19 @@
+{
+  "id": "3.8",
+  "unit": 3,
+  "title": "Deadlock System Model",
+  "zone": "vault",
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

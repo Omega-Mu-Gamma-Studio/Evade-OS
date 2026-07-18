@@ -1,0 +1,19 @@
+{
+  "id": "3.3",
+  "unit": 3,
+  "title": "SJF Scheduling",
+  "zone": "gauntlet",
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

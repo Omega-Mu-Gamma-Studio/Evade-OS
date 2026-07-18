@@ -1,0 +1,19 @@
+{
+  "id": "4.15",
+  "unit": 4,
+  "title": "Allocation Methods",
+  "zone": "archive",
+  "presentationMode": "visual",
+  "phases": [
+    "observe",
+    "fault",
+    "repair",
+    "escape"
+  ],
+  "escapePhaseOptional": false,
+  "narrative": {
+    "story": "TBD",
+    "normal": "TBD"
+  },
+  "content": "TBD"
+}

@@ -1,0 +1,21 @@
+@import './styles/tokens.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--ink-black);
+  color: var(--ink-white);
+  font-family: var(--font-ui);
+}
+
+.stub {
+  padding: 2rem;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  margin: 1rem;
+  opacity: 0.6;
+}
