@@ -81,9 +81,12 @@ rationale in PRD Section 7.0.
 
 ## Contributing
 
-See PRD Section 13.0 for lesson/dialogue/visualizer contribution guidelines.
-Lesson content and dialogue are plain JSON — no code changes needed to write
-a lesson once its `visualComponent`/`terminalInteraction` is assigned.
+See PRD Section 13.0 for lesson/dialogue/visualizer contribution guidelines,
+and **`CONTENT-GUIDE.md`** for the practical, field-by-field reference for
+writing a lesson's JSON content — renderer shapes, dialogue tone rules, and
+a worked example. Lesson content and dialogue are plain JSON — no code
+changes needed to write a lesson once its `visualComponent`/
+`terminalInteraction` is assigned.
 
 ## License
 

@@ -86,17 +86,17 @@ function LogClickMode({ log = DEFAULT_LOG, onObjectiveComplete }) {
   );
 }
 
-function MixedMode({ log, onObjectiveComplete }) {
+function MixedMode({ log, requiredCalls, onObjectiveComplete }) {
   // log-click gate, then a type prompt — decided case-by-case in real lesson content.
   const [phase, setPhase] = useState('log');
   if (phase === 'log') {
     return <LogClickMode log={log} onObjectiveComplete={() => setPhase('type')} />;
   }
-  return <TypeMode onObjectiveComplete={onObjectiveComplete} />;
+  return <TypeMode requiredCalls={requiredCalls} onObjectiveComplete={onObjectiveComplete} />;
 }
 
-export default function TerminalSimulator({ interactionType, log, onObjectiveComplete }) {
-  if (interactionType === 'type') return <TypeMode onObjectiveComplete={onObjectiveComplete} />;
+export default function TerminalSimulator({ interactionType, log, requiredCalls, onObjectiveComplete }) {
+  if (interactionType === 'type') return <TypeMode requiredCalls={requiredCalls} onObjectiveComplete={onObjectiveComplete} />;
   if (interactionType === 'log-click') return <LogClickMode log={log} onObjectiveComplete={onObjectiveComplete} />;
-  return <MixedMode log={log} onObjectiveComplete={onObjectiveComplete} />;
+  return <MixedMode log={log} requiredCalls={requiredCalls} onObjectiveComplete={onObjectiveComplete} />;
 }

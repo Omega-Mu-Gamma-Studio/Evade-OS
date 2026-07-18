@@ -15,7 +15,11 @@
     "story": "TBD",
     "normal": "TBD"
   },
-  "content": "TBD",
+  "content": {
+    "observe": "TBD",
+    "fault": "TBD",
+    "visualizer": {}
+  },
   "visualComponent": "memory-mapper",
   "terminalInteraction": null
 }

@@ -15,7 +15,11 @@
     "story": "TBD",
     "normal": "TBD"
   },
-  "content": "TBD",
+  "content": {
+    "observe": "TBD",
+    "fault": "TBD",
+    "terminal": {}
+  },
   "visualComponent": null,
   "terminalInteraction": "log-click"
 }

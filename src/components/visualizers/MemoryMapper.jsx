@@ -4,22 +4,22 @@
 import { useState } from 'react';
 import { simulateMemory } from '../../engine/memory.js';
 
-const FRAME_COUNT = 4;
-const PAGE_COUNT = 8;
+const DEFAULT_FRAME_COUNT = 4;
+const DEFAULT_PAGE_COUNT = 8;
 
-function initialPages() {
-  return Array.from({ length: PAGE_COUNT }, (_, id) => ({ id, frame: null, valid: false, dirty: false, referenced: false }));
+function initialPages(pageCount) {
+  return Array.from({ length: pageCount }, (_, id) => ({ id, frame: null, valid: false, dirty: false, referenced: false }));
 }
 
-export default function MemoryMapper({ onObjectiveComplete }) {
-  const [pages, setPages] = useState(initialPages);
+export default function MemoryMapper({ frameCount = DEFAULT_FRAME_COUNT, pageCount = DEFAULT_PAGE_COUNT, algorithm = 'fifo', onObjectiveComplete }) {
+  const [pages, setPages] = useState(() => initialPages(pageCount));
   const [log, setLog] = useState([]);
   const [interactions, setInteractions] = useState(0);
 
   const touchPage = (pageId) => {
     const page = pages.find((p) => p.id === pageId);
     if (page.valid) return; // already resident, nothing to do
-    const result = simulateMemory(pages, [], 'pageFault', { pageId, frameCount: FRAME_COUNT, algorithm: 'fifo' });
+    const result = simulateMemory(pages, [], 'pageFault', { pageId, frameCount, algorithm });
     setPages(result.pages);
     setLog((l) => [...l.slice(-4), ...result.log]);
     const next = interactions + 1;
@@ -50,7 +50,7 @@ export default function MemoryMapper({ onObjectiveComplete }) {
       <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-terminal)', opacity: 0.75, minHeight: '4em' }}>
         {log.map((l, i) => <div key={i}>{l}</div>)}
       </div>
-      <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5em' }}>{FRAME_COUNT} frames resident \u00b7 {interactions}/4 page touches</div>
+      <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5em' }}>{frameCount} frames resident \u00b7 {interactions}/4 page touches</div>
     </div>
   );
 }

@@ -9,17 +9,17 @@ import { simulateDisk } from '../../engine/disk.js';
 const DEFAULT_REQUESTS = [{ id: 'r1', cylinder: 98 }, { id: 'r2', cylinder: 183 }, { id: 'r3', cylinder: 37 }, { id: 'r4', cylinder: 122 }, { id: 'r5', cylinder: 14 }, { id: 'r6', cylinder: 124 }, { id: 'r7', cylinder: 65 }];
 const ALGORITHMS = ['fcfs', 'sstf', 'scan', 'cscan', 'look'];
 
-export default function DiskScheduler({ requests = DEFAULT_REQUESTS, onObjectiveComplete }) {
+export default function DiskScheduler({ requests = DEFAULT_REQUESTS, headStart = 53, diskSize = 200, onObjectiveComplete }) {
   const [algorithm, setAlgorithm] = useState('fcfs');
   const [result, setResult] = useState(null);
 
   const run = () => {
-    const r = simulateDisk(requests, algorithm, { headStart: 53, diskSize: 200 });
+    const r = simulateDisk(requests, algorithm, { headStart, diskSize });
     setResult(r);
     onObjectiveComplete();
   };
 
-  const maxCyl = 200;
+  const maxCyl = diskSize;
 
   return (
     <div>

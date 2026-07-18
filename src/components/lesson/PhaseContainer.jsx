@@ -83,7 +83,9 @@ export default function PhaseContainer({ lesson, onLessonComplete }) {
           <>
             {hintActive && (
               <div style={{ padding: '0.75em 1em', border: '1px solid #FFCC00', borderRadius: 6, background: 'rgba(255,204,0,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.85rem' }}>Kernel-ka: "Stuck? Look again at what just changed."</span>
+                <span style={{ fontSize: '0.85rem' }}>
+                  Kernel-ka: "{dialogueData?.hints?.length ? dialogueData.hints[0] : 'Stuck? Look again at what just changed.'}"
+                </span>
                 <button onClick={dismissHint} style={{ background: 'none', border: 'none', color: '#FFCC00', cursor: 'pointer' }}>dismiss</button>
               </div>
             )}
