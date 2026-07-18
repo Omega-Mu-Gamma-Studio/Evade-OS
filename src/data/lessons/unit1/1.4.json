@@ -16,9 +16,40 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Not every transfer needs the CPU standing over it. Hand the disk controller a source, a destination, and a length \u2014 it moves the data itself.",
+    "fault": "The CPU tried to babysit a large transfer and stalled everything behind it. It should have delegated.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "cpu",
+          "x": 20,
+          "y": 20,
+          "label": "CPU",
+          "detail": "Issues the DMA request, then is free to execute other instructions while the transfer runs."
+        },
+        {
+          "id": "dma",
+          "x": 50,
+          "y": 50,
+          "label": "DMA Controller",
+          "detail": "Takes over the bus and moves data directly between memory and a device."
+        },
+        {
+          "id": "mem",
+          "x": 20,
+          "y": 80,
+          "label": "Main Memory",
+          "detail": "Source or destination of the transfer, written to directly by the DMA controller."
+        },
+        {
+          "id": "dev",
+          "x": 80,
+          "y": 80,
+          "label": "I/O Device",
+          "detail": "The disk, network card, or other device sending or receiving the block."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

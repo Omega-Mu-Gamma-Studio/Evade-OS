@@ -1,16 +1,34 @@
 {
   "lessonId": "4.10",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "I need memory too, in strange little pieces, far more often than any process ever asks for it."
+    ],
+    "fault": [
+      "A tiny request just ate an entire block because nothing smaller was available. That's real memory, wasted."
+    ],
+    "repair": [
+      "Watch the slab cache work \u2014 a shape built for objects this exact size."
+    ],
+    "escape": [
+      "Trust the allocator. It's built for exactly this kind of request."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Kernel memory is allocated via slab allocation or the buddy system."
+    ],
+    "fault": [
+      "A size mismatch caused inefficient kernel memory allocation."
+    ],
+    "repair": [
+      "Trace the allocation through the slab cache or buddy allocator."
+    ],
+    "escape": [
+      "Confirm the allocation resolves efficiently."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Slab caches are pre-sized for common kernel object types; the buddy system handles general-purpose blocks."
+  ]
 }

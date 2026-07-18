@@ -1,16 +1,34 @@
 {
   "lessonId": "3.14",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Once it's real, there are only two levers left. Kill something, or take something back. Neither one is painless."
+    ],
+    "fault": [
+      "The cycle's confirmed. Somebody gives something up, or none of us leave this vault."
+    ],
+    "repair": [
+      "Choose carefully. This isn't reversible once it's done."
+    ],
+    "escape": [
+      "Decide now \u2014 the vault won't wait for a comfortable answer."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Deadlock recovery uses process termination or resource preemption."
+    ],
+    "fault": [
+      "A confirmed deadlock requires recovery action."
+    ],
+    "repair": [
+      "Select a recovery method: termination or preemption."
+    ],
+    "escape": [
+      "Execute the recovery action before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Terminating the process closest to completion wastes the least work \u2014 but isn't always required."
+  ]
 }

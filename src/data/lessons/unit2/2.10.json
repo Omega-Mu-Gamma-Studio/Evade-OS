@@ -16,9 +16,20 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "A semaphore isn't just locked or unlocked \u2014 it's a count. As long as the count is above zero, someone can take a resource.",
+    "fault": "The count hit zero and someone tried to take a resource anyway. There's nothing left to give until someone returns one.",
+    "visualizer": {
+      "tokens": [
+        "Sem-1",
+        "Sem-2",
+        "Sem-3"
+      ],
+      "slots": [
+        "Printer",
+        "Scanner",
+        "Disk Drive"
+      ]
+    }
   },
   "visualComponent": "drag-token",
   "terminalInteraction": null

@@ -1,16 +1,34 @@
 {
   "lessonId": "2.9",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "A door, formalized. Lock it going in. Unlock it coming out. Simple \u2014 as long as you remember the second part."
+    ],
+    "fault": [
+      "Someone locked this door and walked away. Everyone else is still standing here."
+    ],
+    "repair": [
+      "Find the lock. Release it, properly this time."
+    ],
+    "escape": [
+      "Lock and unlock cleanly \u2014 don't leave anyone stranded outside."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Mutex locks provide mutual exclusion through explicit lock and unlock operations."
+    ],
+    "fault": [
+      "A mutex was locked and never released."
+    ],
+    "repair": [
+      "Perform the required lock and unlock sequence."
+    ],
+    "escape": [
+      "Complete all lock/unlock crossings before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Every lock needs a matching unlock \u2014 check what's still holding the door shut."
+  ]
 }

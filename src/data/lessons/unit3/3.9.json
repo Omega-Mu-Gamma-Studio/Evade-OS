@@ -16,9 +16,46 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Four conditions have to hold at once for a deadlock to form: mutual exclusion, hold-and-wait, no preemption, circular wait. Break any one, and it can't happen.",
+    "fault": "All four conditions are present right now. That's not bad luck \u2014 that's the exact recipe.",
+    "visualizer": {
+      "processes": [
+        {
+          "id": "P1"
+        },
+        {
+          "id": "P2"
+        }
+      ],
+      "resources": [
+        {
+          "id": "R1",
+          "heldBy": [
+            {
+              "id": "P1"
+            }
+          ],
+          "neededBy": [
+            {
+              "id": "P2"
+            }
+          ]
+        },
+        {
+          "id": "R2",
+          "heldBy": [
+            {
+              "id": "P2"
+            }
+          ],
+          "neededBy": [
+            {
+              "id": "P1"
+            }
+          ]
+        }
+      ]
+    }
   },
   "visualComponent": "deadlock-detector",
   "terminalInteraction": null

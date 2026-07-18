@@ -16,9 +16,16 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "Once it's real, you have two levers: kill a process to free its resources, or preempt a resource out from under one. Neither is clean.",
+    "fault": "The cycle's confirmed. Someone has to give something up, or none of you leave this vault.",
+    "terminal": {
+      "log": [
+        "[detect] wait-for graph scan complete: cycle found (P1 -> P2 -> P3 -> P1)",
+        "[detect] recovery required: select victim process",
+        "[detect] candidates: P1 (low priority), P2 (mid-task), P3 (near completion)"
+      ],
+      "requiredCalls": 1
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "mixed"

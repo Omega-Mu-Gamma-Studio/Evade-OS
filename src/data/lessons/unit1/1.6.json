@@ -16,9 +16,40 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "An OS didn't always look like this. It started as a way to avoid wasting a very expensive machine's idle time.",
+    "fault": "You assumed the OS has always managed memory, scheduling, and users the way it does now. It hasn't \u2014 each of those was a response to a specific failure.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "batch",
+          "x": 15,
+          "y": 60,
+          "label": "Batch Systems",
+          "detail": "Jobs queued and run one after another with no interaction \u2014 the operator was the scheduler."
+        },
+        {
+          "id": "multi",
+          "x": 38,
+          "y": 60,
+          "label": "Multiprogramming",
+          "detail": "Multiple jobs held in memory at once so the CPU always has something to run."
+        },
+        {
+          "id": "time",
+          "x": 61,
+          "y": 60,
+          "label": "Time-Sharing",
+          "detail": "The CPU rotates between users fast enough that each one feels like they have it alone."
+        },
+        {
+          "id": "modern",
+          "x": 84,
+          "y": 60,
+          "label": "Modern OS",
+          "detail": "Manages processes, memory, storage, and protection as one integrated resource manager."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

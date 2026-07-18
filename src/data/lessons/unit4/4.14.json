@@ -16,9 +16,33 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Every file needs to be findable. A directory structure maps names to locations \u2014 a linear list you scan, or a hash table you jump straight into.",
+    "fault": "You're scanning a linear list of ten thousand entries for one file. A hash table would have found it in one lookup.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "linear",
+          "x": 25,
+          "y": 30,
+          "label": "Linear List",
+          "detail": "A simple list of filename-to-location pairs, searched sequentially."
+        },
+        {
+          "id": "hash",
+          "x": 75,
+          "y": 30,
+          "label": "Hash Table",
+          "detail": "Maps filenames to locations via a hash function for near-constant-time lookup."
+        },
+        {
+          "id": "root",
+          "x": 50,
+          "y": 75,
+          "label": "Root Directory",
+          "detail": "The top-level structure every path resolution starts from."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

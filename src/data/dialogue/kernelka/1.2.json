@@ -1,16 +1,34 @@
 {
   "lessonId": "1.2",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Nothing in this world waits its turn. When something needs you, it interrupts \u2014 no warning."
+    ],
+    "fault": [
+      "Feel that? Something just raised its hand mid-step. Ignore it and you lose what it was trying to tell you."
+    ],
+    "repair": [
+      "Watch the vector table. Every interrupt line points to a handler \u2014 follow it."
+    ],
+    "escape": [
+      "It won't wait for you to catch up. Read the trace fast."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Interrupts allow devices to signal the CPU asynchronously."
+    ],
+    "fault": [
+      "An interrupt has been raised and must be handled before execution resumes."
+    ],
+    "repair": [
+      "Trace the interrupt through the vector table to its service routine."
+    ],
+    "escape": [
+      "Process the interrupt trace before it scrolls past."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Each log line follows a strict order \u2014 vector lookup happens before the handler runs."
+  ]
 }

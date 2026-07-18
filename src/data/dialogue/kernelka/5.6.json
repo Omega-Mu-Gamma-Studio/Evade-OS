@@ -1,16 +1,34 @@
 {
   "lessonId": "5.6",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "A different shape, same idea. Apps and Framework, Libraries and Runtime, Kernel underneath. Everything still answers to something below it."
+    ],
+    "fault": [
+      "That call skipped the runtime entirely and went straight to the kernel. This stack needs that mediation \u2014 it's not optional."
+    ],
+    "repair": [
+      "Trace it properly, through the runtime, down to the kernel."
+    ],
+    "escape": [
+      "Confirm the path \u2014 no skipped layers, not now."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Android architecture layers from Applications down to the Linux Kernel."
+    ],
+    "fault": [
+      "A library call bypassed the Android Runtime layer."
+    ],
+    "repair": [
+      "Identify each layer from Applications to the Linux Kernel."
+    ],
+    "escape": [
+      "Confirm all layers before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Native libraries and the Android Runtime both sit between the apps and the kernel \u2014 check which was skipped."
+  ]
 }

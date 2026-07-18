@@ -16,9 +16,33 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "A file's blocks can be laid out contiguously, linked one to the next, or indexed through a table that points to every block.",
+    "fault": "This file is linked, and you followed a broken pointer partway through. There's no index to recover from \u2014 the chain just ends.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "contig",
+          "x": 20,
+          "y": 50,
+          "label": "Contiguous Allocation",
+          "detail": "Blocks stored in one unbroken run. Fast access, but prone to fragmentation."
+        },
+        {
+          "id": "linked",
+          "x": 50,
+          "y": 50,
+          "label": "Linked Allocation",
+          "detail": "Each block points to the next. No fragmentation, but only sequential access."
+        },
+        {
+          "id": "indexed",
+          "x": 80,
+          "y": 50,
+          "label": "Indexed Allocation",
+          "detail": "A dedicated index block lists every block the file owns."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

@@ -16,9 +16,78 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "A wait-for graph makes the danger visible: an arrow from each waiting process to the one holding what it needs.",
+    "fault": "Four processes, four arrows, and the last one points right back to the first. That's your cycle.",
+    "visualizer": {
+      "processes": [
+        {
+          "id": "P1"
+        },
+        {
+          "id": "P2"
+        },
+        {
+          "id": "P3"
+        },
+        {
+          "id": "P4"
+        }
+      ],
+      "resources": [
+        {
+          "id": "R1",
+          "heldBy": [
+            {
+              "id": "P1"
+            }
+          ],
+          "neededBy": [
+            {
+              "id": "P2"
+            }
+          ]
+        },
+        {
+          "id": "R2",
+          "heldBy": [
+            {
+              "id": "P2"
+            }
+          ],
+          "neededBy": [
+            {
+              "id": "P3"
+            }
+          ]
+        },
+        {
+          "id": "R3",
+          "heldBy": [
+            {
+              "id": "P3"
+            }
+          ],
+          "neededBy": [
+            {
+              "id": "P4"
+            }
+          ]
+        },
+        {
+          "id": "R4",
+          "heldBy": [
+            {
+              "id": "P4"
+            }
+          ],
+          "neededBy": [
+            {
+              "id": "P1"
+            }
+          ]
+        }
+      ]
+    }
   },
   "visualComponent": "deadlock-detector",
   "terminalInteraction": null

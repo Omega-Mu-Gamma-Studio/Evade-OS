@@ -1,16 +1,34 @@
 {
   "lessonId": "2.5",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "You don't have to stay one thing. You can split \u2014 keep the same self, move in more than one direction at once."
+    ],
+    "fault": [
+      "You tried to be in three places as one thread. That was never going to work."
+    ],
+    "repair": [
+      "Split properly. Let each thread carry its own piece of the work."
+    ],
+    "escape": [
+      "Hold the split together \u2014 don't let the threads tangle."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "A process may run as a single thread or split into multiple threads."
+    ],
+    "fault": [
+      "A single thread attempted concurrent work that requires multiple threads."
+    ],
+    "repair": [
+      "Compare single-threaded and multi-threaded execution models."
+    ],
+    "escape": [
+      "Identify the correct threading model before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Look for which model gives each thread its own stack and program counter."
+  ]
 }

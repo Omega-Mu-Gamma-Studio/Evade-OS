@@ -16,9 +16,18 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "The head has to physically move to reach every request. The order you serve requests in decides how far it travels \u2014 and how long everything waits.",
+    "fault": "The requests were served in arrival order and the head is thrashing back and forth across the disk. A smarter order would have cut that travel in half.",
+    "terminal": {
+      "log": [
+        "[disk] head at cylinder 53",
+        "[disk] queue: 98, 183, 37, 122, 14, 124, 65, 67",
+        "[disk] servicing in arrival order (FCFS)...",
+        "[disk] head travel so far: 640 cylinders",
+        "[disk] flag: excessive seek distance for this request pattern"
+      ],
+      "requiredCalls": 1
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "mixed"

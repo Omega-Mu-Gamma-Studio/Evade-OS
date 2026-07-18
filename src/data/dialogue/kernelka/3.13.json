@@ -1,16 +1,34 @@
 {
   "lessonId": "3.13",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Draw the arrows. Every process points to whatever it's waiting on. If a trail ever loops back, we're already trapped."
+    ],
+    "fault": [
+      "Four arrows. The last one points right back to where we started. There's your cycle."
+    ],
+    "repair": [
+      "Trace it all the way around. Confirm it closes."
+    ],
+    "escape": [
+      "Confirm the cycle now \u2014 it won't hold still much longer."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "A wait-for graph shows which processes are waiting on which resources."
+    ],
+    "fault": [
+      "The wait-for graph contains a cycle."
+    ],
+    "repair": [
+      "Trace the graph to confirm the circular wait."
+    ],
+    "escape": [
+      "Confirm the detected cycle before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Start at any process and follow the arrows \u2014 a cycle means you return to your start."
+  ]
 }

@@ -1,16 +1,34 @@
 {
   "lessonId": "4.11",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "These aren't just my memories \u2014 they're laid out physically. Platters, tracks, sectors. Distance out here is real."
+    ],
+    "fault": [
+      "You thought two 'nearby' memories would be quick to reach. They're on opposite ends of the disk. Closeness in the index isn't closeness in the world."
+    ],
+    "repair": [
+      "Learn the layout. Platter, track, sector, head \u2014 it all matters out here."
+    ],
+    "escape": [
+      "No time to admire the geometry. Confirm the layout before the head moves again."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "A disk consists of platters, tracks, sectors, and a read/write head."
+    ],
+    "fault": [
+      "An assumption about logical proximity did not match physical layout."
+    ],
+    "repair": [
+      "Identify each physical component of the disk structure."
+    ],
+    "escape": [
+      "Confirm the disk structure before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Physical distance is measured in cylinders and head travel, not block numbers."
+  ]
 }

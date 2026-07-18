@@ -1,16 +1,34 @@
 {
   "lessonId": "5.4",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Two very different worlds handle the same problem. I've lived in neither, exactly \u2014 but I know the shape of both."
+    ],
+    "fault": [
+      "You tried to explain them as one system. They aren't. Look at them side by side, not stacked on top of each other."
+    ],
+    "repair": [
+      "Compare them honestly. Closed and controlled, or open and fragmented \u2014 neither is wrong."
+    ],
+    "escape": [
+      "Pick the right lens for each. Don't blur them together now."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "iOS and Android represent two different mobile OS architecture philosophies."
+    ],
+    "fault": [
+      "The two architectures were incorrectly treated as structurally identical."
+    ],
+    "repair": [
+      "Compare iOS and Android architectures independently."
+    ],
+    "escape": [
+      "Confirm the distinction before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "iOS is closed and vertically controlled; Android is open and built on the Linux kernel."
+  ]
 }

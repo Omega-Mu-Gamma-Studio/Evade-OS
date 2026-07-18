@@ -1,16 +1,34 @@
 {
   "lessonId": "2.2",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Nobody runs the moment they arrive here. You wait your turn, same as everyone else."
+    ],
+    "fault": [
+      "You expected to run instantly. Look again \u2014 there's a line, and you're in it."
+    ],
+    "repair": [
+      "Follow the queues. Job, ready, waiting \u2014 everyone has a place until it's their turn."
+    ],
+    "escape": [
+      "Move through the queues before the window closes."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Processes move between job, ready, and waiting queues before execution."
+    ],
+    "fault": [
+      "A process is queued and not currently executing."
+    ],
+    "repair": [
+      "Trace each queue a process passes through."
+    ],
+    "escape": [
+      "Confirm the queue structure before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Only the ready queue leads directly to the CPU \u2014 everything else waits first."
+  ]
 }

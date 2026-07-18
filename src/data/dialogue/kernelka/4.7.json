@@ -1,16 +1,34 @@
 {
   "lessonId": "4.7",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Full frames mean something has to leave before something new arrives. FIFO just picks whoever's been here longest \u2014 no judgment involved."
+    ],
+    "fault": [
+      "You just evicted a page you needed again a moment later. FIFO doesn't know that \u2014 it only knows arrival order."
+    ],
+    "repair": [
+      "Track the arrival order. Watch what leaves and what should have stayed."
+    ],
+    "escape": [
+      "No time to reconsider the eviction. FIFO doesn't look back \u2014 neither can you."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "FIFO page replacement evicts the page that has been resident longest."
+    ],
+    "fault": [
+      "A page was evicted and immediately needed again."
+    ],
+    "repair": [
+      "Trace the FIFO eviction order across the frame set."
+    ],
+    "escape": [
+      "Confirm the FIFO replacement sequence completes."
+    ]
   },
-  "hints": []
+  "hints": [
+    "FIFO only tracks arrival order, not how recently or often a page was used."
+  ]
 }

@@ -16,9 +16,17 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "The kernel needs its own memory too, in small, oddly-sized chunks, allocated far more often than user processes ever request memory.",
+    "fault": "A tiny kernel object just consumed an entire allocation unit. Without slab-style allocation, size mismatches like this waste real memory.",
+    "terminal": {
+      "log": [
+        "[kmem] request: 64 bytes for inode cache object",
+        "[kmem] slab cache 'inode_cache' has free object, allocating",
+        "[kmem] request: 4096 bytes for page table",
+        "[kmem] no slab fits, falling back to buddy allocator",
+        "[kmem] buddy allocator: splitting 8KB block into two 4KB blocks"
+      ]
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "log-click"

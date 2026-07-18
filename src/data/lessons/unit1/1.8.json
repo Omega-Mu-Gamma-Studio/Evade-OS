@@ -16,9 +16,20 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "Before any of this existed, something had to load the very first instruction. That's the boot sequence \u2014 the OS pulling itself into existence.",
+    "fault": "The trace stopped mid-boot. Something after the bootloader and before init never reported in.",
+    "terminal": {
+      "log": [
+        "[bios] power-on self test complete",
+        "[bios] loading bootloader from sector 0...",
+        "[boot] bootloader executing, locating kernel image...",
+        "[boot] kernel loaded, transferring control...",
+        "[kernel] initializing kernel subsystem...",
+        "[kernel] mounting root filesystem...",
+        "[kernel] spawning init process (PID 1)...",
+        "[kernel] system ready."
+      ]
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "log-click"

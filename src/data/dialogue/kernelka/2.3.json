@@ -1,16 +1,34 @@
 {
   "lessonId": "2.3",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "You can bring things into being here, and end them too. Both take intention."
+    ],
+    "fault": [
+      "Something finished and never left. It's still holding a seat it doesn't need."
+    ],
+    "repair": [
+      "Spawn what you need. Terminate what's done. Watch the tree change shape."
+    ],
+    "escape": [
+      "Clean up before you go \u2014 nothing lingers past its use here."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Processes are created and terminated through explicit operations."
+    ],
+    "fault": [
+      "A completed process has not been terminated."
+    ],
+    "repair": [
+      "Issue the appropriate process creation or termination command."
+    ],
+    "escape": [
+      "Complete the required process operations."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Creation and termination are both deliberate calls \u2014 nothing happens automatically."
+  ]
 }

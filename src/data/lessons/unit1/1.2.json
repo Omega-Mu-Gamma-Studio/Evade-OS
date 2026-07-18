@@ -16,9 +16,19 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "Nothing here waits politely. When a device needs attention, it doesn't ask \u2014 it interrupts.",
+    "fault": "A device just raised its hand mid-instruction. If the CPU ignores it, whatever it was trying to report gets lost.",
+    "terminal": {
+      "log": [
+        "[cpu] executing PID 4, instruction 0x0F2A...",
+        "[irq] IRQ line 3 asserted by disk controller",
+        "[ivt] vector table lookup: IRQ3 -> ISR_DISK",
+        "[cpu] context saved, jumping to ISR_DISK",
+        "[isr] ISR_DISK: transferring completed block to buffer",
+        "[isr] ISR_DISK: acknowledging interrupt, returning control",
+        "[cpu] context restored, resuming PID 4 at 0x0F2A"
+      ]
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "log-click"

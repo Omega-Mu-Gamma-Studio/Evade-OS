@@ -16,9 +16,18 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "You're not alone in here. Other processes exist alongside you, and sometimes you need to hand something across the gap between you.",
+    "fault": "A message is sitting in the pipe with nowhere to go. Route it, or it's lost when the buffer clears.",
+    "visualizer": {
+      "tokens": [
+        "Message A",
+        "Message B"
+      ],
+      "slots": [
+        "Process X Inbox",
+        "Process Y Inbox"
+      ]
+    }
   },
   "visualComponent": "drag-token",
   "terminalInteraction": null

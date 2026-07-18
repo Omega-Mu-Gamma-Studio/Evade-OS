@@ -16,9 +16,40 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Everything you've survived so far could itself be running inside something larger \u2014 a virtual machine, hosted on a system neither of us can see from in here.",
+    "fault": "You tried to access hardware directly and hit a wall that shouldn't exist at this level. Something above this system is intercepting the call.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "host",
+          "x": 50,
+          "y": 15,
+          "label": "Host System",
+          "detail": "The physical machine underneath everything, running the hypervisor."
+        },
+        {
+          "id": "hyper",
+          "x": 50,
+          "y": 40,
+          "label": "Hypervisor",
+          "detail": "Manages and isolates one or more virtual machines on the host."
+        },
+        {
+          "id": "vm1",
+          "x": 25,
+          "y": 75,
+          "label": "This Bunker (VM)",
+          "detail": "A fully virtualized system, believing itself to be the whole machine."
+        },
+        {
+          "id": "vm2",
+          "x": 75,
+          "y": 75,
+          "label": "Another VM",
+          "detail": "A separate virtual machine, isolated from this one by the hypervisor."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

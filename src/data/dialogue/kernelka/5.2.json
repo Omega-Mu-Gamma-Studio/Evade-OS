@@ -1,16 +1,34 @@
 {
   "lessonId": "5.2",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "This bunker was never the whole world. There are other systems out there, and I've known that longer than I've let on."
+    ],
+    "fault": [
+      "That request just left this system entirely. It's not local anymore \u2014 it's out on the network now, out of my hands."
+    ],
+    "repair": [
+      "Follow it. Node to node \u2014 this is bigger than either of us alone."
+    ],
+    "escape": [
+      "It's already gone out. Confirm it reaches the other node before we lose the thread."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Distributed systems connect independent nodes through a network."
+    ],
+    "fault": [
+      "A resource request was routed to a remote node."
+    ],
+    "repair": [
+      "Trace the request across the network to its destination node."
+    ],
+    "escape": [
+      "Confirm the distributed request completes."
+    ]
   },
-  "hints": []
+  "hints": [
+    "A distributed system looks unified from the outside but is made of independent, cooperating machines."
+  ]
 }

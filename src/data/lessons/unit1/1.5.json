@@ -16,9 +16,33 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "One CPU means one thing happening at a time, no matter how you slice it. More cores means true parallel execution \u2014 if the work can actually be split.",
+    "fault": "You tried to run four things on one core and called it parallelism. It isn't \u2014 it's just fast switching.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "single",
+          "x": 22,
+          "y": 50,
+          "label": "Single-Core",
+          "detail": "One execution unit. Concurrency here is an illusion built from rapid switching."
+        },
+        {
+          "id": "multi",
+          "x": 55,
+          "y": 50,
+          "label": "Multiprocessor",
+          "detail": "Multiple separate CPUs, each with its own execution hardware, sharing memory."
+        },
+        {
+          "id": "core",
+          "x": 82,
+          "y": 50,
+          "label": "Multicore",
+          "detail": "Multiple execution cores on a single chip, often sharing cache."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

@@ -1,16 +1,35 @@
 {
   "lessonId": "1.1",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "You're awake. Good. This world runs on physics you don't know yet \u2014 four pieces, one loop.",
+      "CPU. Memory. I/O. The bus that ties them together. Learn the shape before you learn to move in it."
+    ],
+    "fault": [
+      "There. The loop stalled. Something in that chain isn't answering."
+    ],
+    "repair": [
+      "Touch each piece. Find the one that isn't talking to the others."
+    ],
+    "escape": [
+      "Loop's closing. Confirm the chain before it locks you out."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "A computer system consists of a CPU, memory, I/O devices, and a bus connecting them."
+    ],
+    "fault": [
+      "The instruction execution cycle has stalled at one of these components."
+    ],
+    "repair": [
+      "Inspect each component to identify its role in the cycle."
+    ],
+    "escape": [
+      "Confirm all components before the cycle resets."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Start at the CPU and follow the bus outward \u2014 where does the path stop responding?"
+  ]
 }

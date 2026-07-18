@@ -1,16 +1,34 @@
 {
   "lessonId": "4.14",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Every memory needs a way to be found again. A list you search by hand, or a table that finds it instantly. I chose the slow one for too long."
+    ],
+    "fault": [
+      "You're scanning thousands of entries for one file. There was a faster way, and I didn't use it."
+    ],
+    "repair": [
+      "Build the table properly this time. Let it find things the way it should."
+    ],
+    "escape": [
+      "No time to scan by hand. Trust the faster structure."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Directory structures can be implemented as linear lists or hash tables."
+    ],
+    "fault": [
+      "A linear search is being used where a hash table would be more efficient."
+    ],
+    "repair": [
+      "Compare linear list and hash table lookup performance."
+    ],
+    "escape": [
+      "Confirm the correct directory structure before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "A hash table trades a small amount of memory for near-constant-time lookup."
+  ]
 }

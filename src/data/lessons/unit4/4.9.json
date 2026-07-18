@@ -16,9 +16,13 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Give a process too few frames and it spends more time paging things in and out than actually running. That's thrashing.",
+    "fault": "CPU utilization just dropped even though more processes were added. That's backwards from what you'd expect \u2014 and it's the signature of thrashing.",
+    "visualizer": {
+      "frameCount": 4,
+      "pageCount": 8,
+      "algorithm": "fifo"
+    }
   },
   "visualComponent": "memory-mapper",
   "terminalInteraction": null

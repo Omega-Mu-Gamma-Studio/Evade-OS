@@ -16,9 +16,13 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "When every frame is full and a new page needs to come in, something has to leave. FIFO evicts whichever page arrived first \u2014 no more, no less.",
+    "fault": "You evicted a page that was about to be used again. FIFO doesn't look ahead \u2014 it only remembers arrival order, and it just cost you.",
+    "visualizer": {
+      "frameCount": 4,
+      "pageCount": 8,
+      "algorithm": "fifo"
+    }
   },
   "visualComponent": "memory-mapper",
   "terminalInteraction": null

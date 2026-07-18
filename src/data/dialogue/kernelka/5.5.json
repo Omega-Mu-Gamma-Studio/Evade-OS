@@ -1,16 +1,34 @@
 {
   "lessonId": "5.5",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Layer by layer, this is how it's built \u2014 Cocoa Touch down to Core OS. Every layer exists to protect the one beneath it."
+    ],
+    "fault": [
+      "Something just skipped straight to the bottom layer. That's not allowed here \u2014 every layer exists for a reason."
+    ],
+    "repair": [
+      "Walk it top to bottom. Respect each layer's boundary."
+    ],
+    "escape": [
+      "No shortcuts through the stack. Confirm every layer in order."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "iOS architecture layers from Cocoa Touch down to Core OS."
+    ],
+    "fault": [
+      "An application attempted to bypass intermediate architecture layers."
+    ],
+    "repair": [
+      "Identify each layer from Cocoa Touch to Core OS."
+    ],
+    "escape": [
+      "Confirm all layers before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Each layer only talks to the one directly above or below it \u2014 never skips."
+  ]
 }

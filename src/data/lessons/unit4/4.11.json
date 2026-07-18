@@ -16,9 +16,40 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "A disk isn't one flat surface. Platters, tracks, sectors, cylinders \u2014 the physical layout decides how far the head has to travel for any given request.",
+    "fault": "You assumed reading two 'nearby' blocks would be fast. They're on opposite cylinders. Logical closeness isn't physical closeness.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "platter",
+          "x": 50,
+          "y": 15,
+          "label": "Platter",
+          "detail": "A spinning disk surface that stores data magnetically."
+        },
+        {
+          "id": "track",
+          "x": 25,
+          "y": 50,
+          "label": "Track",
+          "detail": "A concentric ring on the platter where data is written."
+        },
+        {
+          "id": "sector",
+          "x": 75,
+          "y": 50,
+          "label": "Sector",
+          "detail": "A fixed-size segment of a track \u2014 the smallest addressable unit."
+        },
+        {
+          "id": "head",
+          "x": 50,
+          "y": 85,
+          "label": "Read/Write Head",
+          "detail": "Physically moves across tracks to access requested sectors."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

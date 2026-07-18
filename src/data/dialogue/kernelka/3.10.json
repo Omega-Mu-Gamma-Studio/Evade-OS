@@ -1,16 +1,34 @@
 {
   "lessonId": "3.10",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Four doors out of a vault like this. Prevent it. Avoid it. Detect it. Recover from it. Pick the right one, not just any one."
+    ],
+    "fault": [
+      "You reached for detection when this called for prevention. Wrong door doesn't open."
+    ],
+    "repair": [
+      "Match the approach to the situation. Not every vault needs the same key."
+    ],
+    "escape": [
+      "Choose fast \u2014 the wrong approach costs you time you don't have."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Deadlocks can be handled through prevention, avoidance, detection, or recovery."
+    ],
+    "fault": [
+      "An inappropriate handling method was selected for the current scenario."
+    ],
+    "repair": [
+      "Match each approach to the scenario it is designed for."
+    ],
+    "escape": [
+      "Select the correct approach before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Prevention and avoidance act before the fact; detection and recovery act after."
+  ]
 }

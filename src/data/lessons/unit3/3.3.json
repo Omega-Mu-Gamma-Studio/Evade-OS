@@ -16,9 +16,33 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Run the shortest job first, and average waiting time drops. It's provably optimal for minimizing wait \u2014 if you actually know the burst times in advance.",
+    "fault": "You ran the longest job first out of habit. Two shorter jobs sat idle behind it the whole time, for no reason.",
+    "visualizer": {
+      "processes": [
+        {
+          "id": "P1",
+          "name": "P1",
+          "arrivalTime": 0,
+          "burstTime": 6,
+          "priority": 1
+        },
+        {
+          "id": "P2",
+          "name": "P2",
+          "arrivalTime": 0,
+          "burstTime": 2,
+          "priority": 1
+        },
+        {
+          "id": "P3",
+          "name": "P3",
+          "arrivalTime": 0,
+          "burstTime": 4,
+          "priority": 1
+        }
+      ]
+    }
   },
   "visualComponent": "process-viewer",
   "terminalInteraction": null

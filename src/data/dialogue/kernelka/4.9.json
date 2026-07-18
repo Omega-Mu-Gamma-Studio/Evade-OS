@@ -1,16 +1,34 @@
 {
   "lessonId": "4.9",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Too few frames, and a process stops running and starts just paging things in and out. That's not progress \u2014 that's thrashing."
+    ],
+    "fault": [
+      "CPU utilization just dropped even though you added more work. That's the tower shaking \u2014 thrashing, not overload."
+    ],
+    "repair": [
+      "Ease off. Fewer processes, more frames each \u2014 watch it stabilize."
+    ],
+    "escape": [
+      "Feel that shake? Don't let it collapse. Reduce the load, now."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Thrashing occurs when excessive paging consumes more time than execution."
+    ],
+    "fault": [
+      "CPU utilization dropped despite increased process count, indicating thrashing."
+    ],
+    "repair": [
+      "Reduce the degree of multiprogramming to relieve paging pressure."
+    ],
+    "escape": [
+      "Confirm the thrashing condition is resolved."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Watch the relationship between utilization and process count \u2014 thrashing inverts the expected trend."
+  ]
 }

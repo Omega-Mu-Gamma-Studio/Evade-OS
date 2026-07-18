@@ -1,16 +1,34 @@
 {
   "lessonId": "4.12",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Every request costs the head a trip. The order you choose decides how far it has to travel \u2014 and how much of this it survives."
+    ],
+    "fault": [
+      "You just watched the head sprint back and forth for no reason. That's what happens without a smarter order."
+    ],
+    "repair": [
+      "Direct it properly. Watch the travel distance actually shrink."
+    ],
+    "escape": [
+      "Every unnecessary trip out here costs something real. Choose the order carefully."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Disk scheduling algorithms determine the order in which I/O requests are serviced."
+    ],
+    "fault": [
+      "FCFS servicing order is causing excessive head travel."
+    ],
+    "repair": [
+      "Reorder the request queue to reduce total seek distance."
+    ],
+    "escape": [
+      "Confirm the reordered schedule before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Sorting requests by cylinder distance from the current head position reduces total travel."
+  ]
 }

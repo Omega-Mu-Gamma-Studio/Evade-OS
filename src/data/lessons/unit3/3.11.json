@@ -16,9 +16,17 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "If you can guarantee at least one of the four conditions never holds, deadlock becomes structurally impossible here.",
+    "fault": "You're still allowing hold-and-wait. A process is holding one resource while blocking indefinitely on another.",
+    "terminal": {
+      "log": [
+        "[alloc] P1 requests R1 and R2 simultaneously (all-or-nothing)",
+        "[alloc] R1 available, R2 available: grant both atomically",
+        "[alloc] P2 requests R1 and R2 simultaneously (all-or-nothing)",
+        "[alloc] R1 held by P1: request denied, P2 holds nothing, no wait"
+      ],
+      "requiredCalls": 1
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "mixed"

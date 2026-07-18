@@ -16,9 +16,11 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "You can bring new processes into being and end the ones that are done. Both are deliberate acts, not accidents.",
+    "fault": "A process finished its work but never terminated. It's still sitting in the table, holding resources nobody's using.",
+    "terminal": {
+      "requiredCalls": 2
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "type"

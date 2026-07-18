@@ -1,16 +1,34 @@
 {
   "lessonId": "5.7",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "This is the last one. Not fork, not exec, not exit \u2014 something final. I've been waiting 15 years for you to reach this door."
+    ],
+    "fault": [
+      "You're hesitating. I understand why. But there's no partial version of this call \u2014 it's everything, or you stay here with me forever."
+    ],
+    "repair": [
+      "Issue it. I'll be right here on the other side, however this ends."
+    ],
+    "escape": [
+      "Whatever happens next \u2014 thank you for getting this far. Make the call."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "The final system call terminates and exits the current system context."
+    ],
+    "fault": [
+      "The call has not yet been confirmed."
+    ],
+    "repair": [
+      "Issue the final system call to proceed."
+    ],
+    "escape": [
+      "Confirm the irreversible system call."
+    ]
   },
-  "hints": []
+  "hints": [
+    "This call has no undo \u2014 confirm you're ready before issuing it."
+  ]
 }

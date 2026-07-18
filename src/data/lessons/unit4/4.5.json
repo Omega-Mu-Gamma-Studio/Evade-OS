@@ -16,9 +16,13 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Combine both: segment memory by meaning first, then page each segment. You get the logical structure of segmentation with the flexible allocation of paging.",
+    "fault": "You paged correctly but forgot which segment that page belonged to. Without the segment context, the address means nothing.",
+    "visualizer": {
+      "frameCount": 4,
+      "pageCount": 8,
+      "algorithm": "fifo"
+    }
   },
   "visualComponent": "memory-mapper",
   "terminalInteraction": null

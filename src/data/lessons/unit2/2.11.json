@@ -16,9 +16,12 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Some problems repeat everywhere: producers filling a buffer, readers and writers sharing a table, philosophers reaching for shared forks.",
+    "fault": "The buffer filled past capacity because nobody checked before writing. The classic problem, happening exactly as the textbook warns.",
+    "visualizer": {
+      "capacity": 5,
+      "requiredCycles": 4
+    }
   },
   "visualComponent": "multi-avatar-puzzle",
   "terminalInteraction": null

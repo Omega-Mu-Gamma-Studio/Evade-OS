@@ -1,16 +1,34 @@
 {
   "lessonId": "4.1",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Don't page out. I'll keep your body safe while you're gone."
+    ],
+    "fault": [
+      "You're not bound where you think you are. The binding shifted, and I can't hold the floor steady if you don't notice that."
+    ],
+    "repair": [
+      "Watch the swap. Out to disk, back to memory \u2014 I'll track you the whole way."
+    ],
+    "escape": [
+      "Stay bound. I can't catch you if the address moves again."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Processes can be swapped between main memory and disk."
+    ],
+    "fault": [
+      "An address binding mismatch occurred during swapping."
+    ],
+    "repair": [
+      "Track the process through the swap operation."
+    ],
+    "escape": [
+      "Confirm the swap completes correctly."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Binding can happen at compile, load, or execution time \u2014 check which one applies here."
+  ]
 }

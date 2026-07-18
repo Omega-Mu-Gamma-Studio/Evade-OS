@@ -16,9 +16,40 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "You're not just a body moving through this world anymore. You're a process \u2014 an identity, a state, a place in memory, a point of execution.",
+    "fault": "Something asked what you are, and you had no answer. A process without a defined state can't be scheduled, can't be tracked, can't exist properly.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "pid",
+          "x": 25,
+          "y": 25,
+          "label": "Process ID",
+          "detail": "A unique identifier the OS uses to track this process among all others."
+        },
+        {
+          "id": "state",
+          "x": 75,
+          "y": 25,
+          "label": "Process State",
+          "detail": "New, ready, running, waiting, or terminated \u2014 where the process currently stands."
+        },
+        {
+          "id": "pc",
+          "x": 25,
+          "y": 70,
+          "label": "Program Counter",
+          "detail": "The address of the next instruction this process will execute."
+        },
+        {
+          "id": "mem",
+          "x": 75,
+          "y": 70,
+          "label": "Memory Image",
+          "detail": "The code, data, and stack that belong to this process alone."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

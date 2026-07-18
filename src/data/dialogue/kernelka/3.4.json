@@ -1,16 +1,34 @@
 {
   "lessonId": "3.4",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Everyone gets a slice. Then it's the next one's turn. Nobody holds the Core forever here."
+    ],
+    "fault": [
+      "The slice was too big. P1 just ran like it owned the place \u2014 that's not round-robin anymore."
+    ],
+    "repair": [
+      "Tighten the quantum. Watch everyone actually get their turn."
+    ],
+    "escape": [
+      "Keep the slices even \u2014 don't let anyone hold too long."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Round-robin scheduling allocates a fixed time quantum to each process in turn."
+    ],
+    "fault": [
+      "An oversized quantum caused RR to behave like FCFS."
+    ],
+    "repair": [
+      "Run the schedule with a properly sized quantum."
+    ],
+    "escape": [
+      "Complete the scheduling run before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "A quantum close to the longest burst time defeats the purpose of round-robin."
+  ]
 }

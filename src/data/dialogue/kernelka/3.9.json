@@ -1,16 +1,34 @@
 {
   "lessonId": "3.9",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Four things have to be true at once for this vault to trap you. All four, together, every time."
+    ],
+    "fault": [
+      "Look around. All four are already here. This wasn't bad luck \u2014 it was inevitable the moment they lined up."
+    ],
+    "repair": [
+      "Name them. Mutual exclusion, hold-and-wait, no preemption, circular wait."
+    ],
+    "escape": [
+      "Confirm all four before the vault seals again."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Deadlock requires four conditions: mutual exclusion, hold-and-wait, no preemption, circular wait."
+    ],
+    "fault": [
+      "All four necessary conditions for deadlock are present."
+    ],
+    "repair": [
+      "Identify each of the four conditions in the current state."
+    ],
+    "escape": [
+      "Confirm all four conditions before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Missing even one of the four conditions means deadlock cannot occur."
+  ]
 }

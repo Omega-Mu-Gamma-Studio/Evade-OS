@@ -1,16 +1,34 @@
 {
   "lessonId": "2.6",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Two of you, one shared thing between you. It only stays clean if you take turns."
+    ],
+    "fault": [
+      "You didn't take turns. Now the value depends on whoever got there first \u2014 that's a race, and it's not one you want to win by accident."
+    ],
+    "repair": [
+      "Watch it happen. See exactly where the overlap breaks it."
+    ],
+    "escape": [
+      "Keep them from overlapping \u2014 you won't get a clean result otherwise."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Concurrent threads sharing data can produce inconsistent results."
+    ],
+    "fault": [
+      "A race condition has occurred on shared data."
+    ],
+    "repair": [
+      "Observe the interleaving that causes the inconsistent result."
+    ],
+    "escape": [
+      "Prevent the race condition before the cycle completes."
+    ]
   },
-  "hints": []
+  "hints": [
+    "The problem isn't the threads \u2014 it's what happens when their steps interleave."
+  ]
 }

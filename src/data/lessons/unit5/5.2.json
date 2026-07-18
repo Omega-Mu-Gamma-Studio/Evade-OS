@@ -16,9 +16,33 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "This bunker was never alone. Other systems exist beyond it, reachable only through a network none of us built ourselves.",
+    "fault": "You're trying to reach a resource that isn't local anymore. It lives on another node, and the request just left this system entirely.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "node1",
+          "x": 20,
+          "y": 30,
+          "label": "Node A (this Bunker)",
+          "detail": "One machine in a network of independent, cooperating systems."
+        },
+        {
+          "id": "node2",
+          "x": 80,
+          "y": 30,
+          "label": "Node B",
+          "detail": "A separate system reachable only through the network."
+        },
+        {
+          "id": "net",
+          "x": 50,
+          "y": 65,
+          "label": "Network",
+          "detail": "The link that lets independent nodes appear as one coordinated system."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

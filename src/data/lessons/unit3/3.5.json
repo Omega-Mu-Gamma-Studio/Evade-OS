@@ -16,9 +16,33 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Some jobs matter more than others. Give them a priority number, and the scheduler runs the most important one first \u2014 lower number, higher priority.",
+    "fault": "A low-priority process has been sitting in the ready queue since the run started. Higher-priority arrivals keep cutting in front of it. That's starvation.",
+    "visualizer": {
+      "processes": [
+        {
+          "id": "P1",
+          "name": "P1",
+          "arrivalTime": 0,
+          "burstTime": 4,
+          "priority": 3
+        },
+        {
+          "id": "P2",
+          "name": "P2",
+          "arrivalTime": 1,
+          "burstTime": 3,
+          "priority": 1
+        },
+        {
+          "id": "P3",
+          "name": "P3",
+          "arrivalTime": 2,
+          "burstTime": 2,
+          "priority": 2
+        }
+      ]
+    }
   },
   "visualComponent": "process-viewer",
   "terminalInteraction": null

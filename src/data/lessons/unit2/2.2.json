@@ -16,9 +16,40 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Not everyone runs at once. Everyone waits in line somewhere \u2014 a job queue, a ready queue, a device queue \u2014 until it's their turn at the CPU.",
+    "fault": "You expected to run immediately and instead landed in a queue behind three others. That's not a bug. That's scheduling.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "job",
+          "x": 15,
+          "y": 50,
+          "label": "Job Queue",
+          "detail": "Every process that has entered the system, waiting to be admitted."
+        },
+        {
+          "id": "ready",
+          "x": 45,
+          "y": 50,
+          "label": "Ready Queue",
+          "detail": "Processes loaded in memory, waiting only for CPU time."
+        },
+        {
+          "id": "cpu",
+          "x": 75,
+          "y": 25,
+          "label": "CPU",
+          "detail": "Executes whichever process the scheduler selects next."
+        },
+        {
+          "id": "wait",
+          "x": 75,
+          "y": 75,
+          "label": "Waiting Queue",
+          "detail": "Processes blocked on I/O or an event, set aside until they're ready again."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

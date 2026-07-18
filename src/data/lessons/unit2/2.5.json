@@ -16,9 +16,40 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "A process can be one line of execution, or it can split itself into several \u2014 threads, sharing the same memory but moving independently.",
+    "fault": "You tried to do three things at once as a single thread. You could only ever do one. Splitting was the answer, and you didn't split.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "single",
+          "x": 20,
+          "y": 30,
+          "label": "Single-Threaded Process",
+          "detail": "One program counter, one stack \u2014 strictly one thing happening at a time."
+        },
+        {
+          "id": "multi",
+          "x": 80,
+          "y": 30,
+          "label": "Multi-Threaded Process",
+          "detail": "Multiple threads, each with its own stack and PC, sharing one address space."
+        },
+        {
+          "id": "many1",
+          "x": 30,
+          "y": 75,
+          "label": "Many-to-One Model",
+          "detail": "Many user threads mapped onto a single kernel thread."
+        },
+        {
+          "id": "one1",
+          "x": 70,
+          "y": 75,
+          "label": "One-to-One Model",
+          "detail": "Each user thread maps to its own kernel thread \u2014 true parallelism, more overhead."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

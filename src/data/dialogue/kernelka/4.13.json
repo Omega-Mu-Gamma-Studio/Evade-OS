@@ -1,16 +1,34 @@
 {
   "lessonId": "4.13",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "This is where the overflow goes when memory runs out. Not everything I'm holding can stay close."
+    ],
+    "fault": [
+      "There's nowhere left to send anything. Swap space is full, and memory has nowhere left to breathe."
+    ],
+    "repair": [
+      "Watch what's moving in and out. Careful \u2014 there's less room than there looks."
+    ],
+    "escape": [
+      "No more room to spare. Move only what you have to."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Swap space provides disk-backed overflow storage for memory pages."
+    ],
+    "fault": [
+      "Swap space usage has reached capacity."
+    ],
+    "repair": [
+      "Trace page movement into and out of swap space."
+    ],
+    "escape": [
+      "Confirm swap operations complete without exceeding capacity."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Once swap is full, no further pages can be evicted from memory \u2014 that's a hard limit."
+  ]
 }

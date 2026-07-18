@@ -1,16 +1,34 @@
 {
   "lessonId": "1.8",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Before any of this existed \u2014 before me \u2014 something had to load the very first instruction."
+    ],
+    "fault": [
+      "The trace stopped. Whatever comes after the bootloader never checked in."
+    ],
+    "repair": [
+      "Follow the sequence. Someone has to bring this system up, step by step."
+    ],
+    "escape": [
+      "It's rebooting whether you're ready or not. Confirm the sequence."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "The boot sequence loads and initializes the operating system from power-on."
+    ],
+    "fault": [
+      "The boot trace has stalled before initialization completed."
+    ],
+    "repair": [
+      "Step through the boot log to confirm each stage completes."
+    ],
+    "escape": [
+      "Confirm all boot stages before the sequence times out."
+    ]
   },
-  "hints": []
+  "hints": [
+    "The order is fixed: bootloader, kernel load, subsystem init, filesystem mount, init process."
+  ]
 }

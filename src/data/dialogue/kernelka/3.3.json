@@ -1,16 +1,34 @@
 {
   "lessonId": "3.3",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Shortest job first. If you know how long something takes, run the quick one before the slow one \u2014 everyone waits less."
+    ],
+    "fault": [
+      "You ran the long one out of habit. Two quick jobs just sat there for nothing."
+    ],
+    "repair": [
+      "Reorder by burst time. Watch the average wait actually drop."
+    ],
+    "escape": [
+      "Faster. Pick the short job before the Core picks for you."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "SJF scheduling selects the process with the shortest burst time next."
+    ],
+    "fault": [
+      "A longer process was scheduled ahead of shorter ones."
+    ],
+    "repair": [
+      "Reorder processes by burst time."
+    ],
+    "escape": [
+      "Complete the scheduling run before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Sort strictly by burst time, shortest first, ignoring arrival order once all are present."
+  ]
 }

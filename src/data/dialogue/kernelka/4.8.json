@@ -1,16 +1,34 @@
 {
   "lessonId": "4.8",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Not everyone gets the same number of frames up here. Someone decides the split \u2014 fixed, or based on need."
+    ],
+    "fault": [
+      "One process is holding almost every frame. The rest are trapped thrashing on what's left."
+    ],
+    "repair": [
+      "Rebalance it. Watch what a fairer split actually does."
+    ],
+    "escape": [
+      "Keep the allocation fair \u2014 an imbalance here compounds fast."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Frame allocation can be fixed or variable across processes."
+    ],
+    "fault": [
+      "An imbalanced frame allocation is causing excessive paging."
+    ],
+    "repair": [
+      "Adjust the frame allocation across processes."
+    ],
+    "escape": [
+      "Confirm a balanced allocation before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Too few frames for a process's working set is what triggers constant paging."
+  ]
 }

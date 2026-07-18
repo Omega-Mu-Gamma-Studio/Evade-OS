@@ -16,9 +16,40 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Four things hold this world together: a CPU that executes, memory that stores, I/O that connects outward, and a bus that ties them into one loop.",
+    "fault": "You reached for an instruction and nothing answered. The loop is broken somewhere between fetch and execute \u2014 trace it.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "cpu",
+          "x": 50,
+          "y": 20,
+          "label": "CPU",
+          "detail": "Fetches, decodes, and executes one instruction at a time."
+        },
+        {
+          "id": "mem",
+          "x": 20,
+          "y": 55,
+          "label": "Main Memory",
+          "detail": "Holds the instructions and data the CPU is currently working with."
+        },
+        {
+          "id": "io",
+          "x": 80,
+          "y": 55,
+          "label": "I/O Controller",
+          "detail": "Bridges the system to keyboards, disks, and everything outside it."
+        },
+        {
+          "id": "bus",
+          "x": 50,
+          "y": 80,
+          "label": "System Bus",
+          "detail": "The shared pathway every component uses to talk to every other one."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

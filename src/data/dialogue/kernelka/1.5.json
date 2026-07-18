@@ -1,16 +1,34 @@
 {
   "lessonId": "1.5",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "One core, one thing at a time \u2014 no matter how fast it switches, it's still one thing."
+    ],
+    "fault": [
+      "You called that parallel. It wasn't. Look again at what's actually running at once."
+    ],
+    "repair": [
+      "Compare the layouts. Where does true simultaneity actually happen?"
+    ],
+    "escape": [
+      "Pick the real parallel path \u2014 you won't get a second look."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Systems vary from single-core to multiprocessor and multicore organization."
+    ],
+    "fault": [
+      "A workload was assumed parallel but is running on a single execution unit."
+    ],
+    "repair": [
+      "Compare single-core, multiprocessor, and multicore layouts."
+    ],
+    "escape": [
+      "Select the configuration offering true parallel execution."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Count the actual independent execution units, not the number of running tasks."
+  ]
 }

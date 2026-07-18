@@ -16,9 +16,62 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Three processes each hold one resource and wait on another. As long as no one waits on their own resource, the system keeps moving.",
+    "fault": "P3 just requested R1 \u2014 which P1 is holding while waiting on R2, which P2 is holding while waiting on R3. Nobody can move.",
+    "visualizer": {
+      "processes": [
+        {
+          "id": "P1"
+        },
+        {
+          "id": "P2"
+        },
+        {
+          "id": "P3"
+        }
+      ],
+      "resources": [
+        {
+          "id": "R1",
+          "heldBy": [
+            {
+              "id": "P1"
+            }
+          ],
+          "neededBy": [
+            {
+              "id": "P2"
+            }
+          ]
+        },
+        {
+          "id": "R2",
+          "heldBy": [
+            {
+              "id": "P2"
+            }
+          ],
+          "neededBy": [
+            {
+              "id": "P3"
+            }
+          ]
+        },
+        {
+          "id": "R3",
+          "heldBy": [
+            {
+              "id": "P3"
+            }
+          ],
+          "neededBy": [
+            {
+              "id": "P1"
+            }
+          ]
+        }
+      ]
+    }
   },
   "visualComponent": "deadlock-detector",
   "terminalInteraction": null

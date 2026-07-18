@@ -16,9 +16,11 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "A monitor is a room with the mutual exclusion built into the walls. You don't lock the door yourself \u2014 the room won't let two of you in together.",
+    "fault": "You expected to need your own lock here, and reached for one that didn't exist. The monitor already enforces it \u2014 trust the structure.",
+    "visualizer": {
+      "requiredCrossings": 3
+    }
   },
   "visualComponent": "door-gate",
   "terminalInteraction": null

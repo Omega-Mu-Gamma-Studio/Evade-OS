@@ -1,7 +1,7 @@
 {
   "id": "5.6",
   "unit": 5,
-  "title": "Mobile OS — Android",
+  "title": "Mobile OS \u2014 Android",
   "zone": null,
   "presentationMode": "visual",
   "phases": [
@@ -16,9 +16,40 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Apps and Framework on top, then Libraries and Android Runtime, then the Linux Kernel underneath everything \u2014 a different shape than iOS, same underlying problem.",
+    "fault": "A library call went straight to the Linux kernel, bypassing the Android Runtime entirely. This stack expects that mediation, and it's missing.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "apps",
+          "x": 50,
+          "y": 15,
+          "label": "Applications & Framework",
+          "detail": "User-facing apps and the Java API framework they're built on."
+        },
+        {
+          "id": "libs",
+          "x": 30,
+          "y": 50,
+          "label": "Native Libraries",
+          "detail": "C/C++ libraries providing core functionality like graphics and databases."
+        },
+        {
+          "id": "art",
+          "x": 70,
+          "y": 50,
+          "label": "Android Runtime",
+          "detail": "Executes app bytecode, one runtime instance per app."
+        },
+        {
+          "id": "kernel",
+          "x": 50,
+          "y": 85,
+          "label": "Linux Kernel",
+          "detail": "Manages hardware, memory, and process scheduling at the lowest layer."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

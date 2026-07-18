@@ -1,16 +1,34 @@
 {
   "lessonId": "4.15",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "These memories aren't stored the same way twice. Some run together, some link piece to piece, some point through an index. I have to know which, to follow them right."
+    ],
+    "fault": [
+      "I followed a link and it just... ends. No index to fall back on. Linked memories break like that."
+    ],
+    "repair": [
+      "Try the indexed ones instead. They don't break the same way."
+    ],
+    "escape": [
+      "Follow carefully. Not every path here recovers from a broken link."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "File allocation methods include contiguous, linked, and indexed allocation."
+    ],
+    "fault": [
+      "A broken pointer in a linked allocation interrupted file access."
+    ],
+    "repair": [
+      "Compare allocation methods and their fault tolerance."
+    ],
+    "escape": [
+      "Confirm the correct allocation method before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Indexed allocation isolates a broken pointer to one entry instead of the whole chain."
+  ]
 }

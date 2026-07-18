@@ -16,9 +16,16 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "One real system underneath all this fiction: processes, permissions, modules loaded straight into a running kernel. This is where the metaphor gets thin.",
+    "fault": "A process is running with more permission than it should have. Somewhere, a command was issued carelessly.",
+    "terminal": {
+      "log": [
+        "[linux] kernel module 'evade_core' loaded",
+        "[linux] process tree: init(1) -> kernelka(842) -> shell(913)",
+        "[linux] permission check: shell(913) running as uid 0"
+      ],
+      "requiredCalls": 1
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "mixed"

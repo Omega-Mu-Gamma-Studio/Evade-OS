@@ -1,16 +1,34 @@
 {
   "lessonId": "2.7",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "There's a narrow stretch ahead. Only one of you gets to cross it at a time. That's not me being strict \u2014 that's the rule keeping you both safe."
+    ],
+    "fault": [
+      "Two of you tried to cross together. That's exactly what this stretch can't allow."
+    ],
+    "repair": [
+      "One at a time. Let the door do its job."
+    ],
+    "escape": [
+      "Cross clean, one at a time, before the gate shuts."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Only one process may execute in the critical section at a time."
+    ],
+    "fault": [
+      "Multiple processes attempted to enter the critical section simultaneously."
+    ],
+    "repair": [
+      "Enforce one-at-a-time access to the critical section."
+    ],
+    "escape": [
+      "Complete all required crossings before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Wait for the gate to fully clear before your own crossing begins."
+  ]
 }

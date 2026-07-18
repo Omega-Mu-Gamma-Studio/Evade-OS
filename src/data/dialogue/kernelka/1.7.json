@@ -1,16 +1,34 @@
 {
   "lessonId": "1.7",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "You don't get to touch this world's hardware directly. You ask. There's one door, and I control it."
+    ],
+    "fault": [
+      "You just tried to go around me. That door doesn't open that way."
+    ],
+    "repair": [
+      "Use the call. It's the only path the kernel actually honors."
+    ],
+    "escape": [
+      "No shortcuts left. Call it correctly or stay locked out."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "User programs request kernel services through system calls."
+    ],
+    "fault": [
+      "Direct hardware access was attempted outside the system call interface."
+    ],
+    "repair": [
+      "Issue the correct system call to perform the operation."
+    ],
+    "escape": [
+      "Issue the required system calls before the interface locks."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Only a small, fixed set of calls exist \u2014 fork, exec, exit, wait, ps, kill, mount, chmod."
+  ]
 }

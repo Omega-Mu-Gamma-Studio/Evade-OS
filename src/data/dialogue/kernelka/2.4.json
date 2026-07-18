@@ -1,16 +1,34 @@
 {
   "lessonId": "2.4",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "You're not alone in here. Sometimes you need to reach across to something else like you."
+    ],
+    "fault": [
+      "That message is just sitting there. Whoever it's for hasn't heard it yet."
+    ],
+    "repair": [
+      "Route it through. Let's get you talking to each other properly."
+    ],
+    "escape": [
+      "Get every message through before the channel closes."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Processes exchange data through inter-process communication mechanisms."
+    ],
+    "fault": [
+      "A message is unrouted between processes."
+    ],
+    "repair": [
+      "Route each message to its intended recipient."
+    ],
+    "escape": [
+      "Complete all message routing before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Every message has exactly one intended destination \u2014 match them carefully."
+  ]
 }

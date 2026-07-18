@@ -1,16 +1,34 @@
 {
   "lessonId": "3.6",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "More than one Core now. More lanes, more choices \u2014 and someone has to keep them balanced."
+    ],
+    "fault": [
+      "One lane is buried and two are empty. Nobody moved the load."
+    ],
+    "repair": [
+      "Spread it out. Balance the lanes before one of them breaks."
+    ],
+    "escape": [
+      "Keep it balanced \u2014 an idle lane right now is wasted time."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Multiple-processor scheduling requires balancing load across available CPUs."
+    ],
+    "fault": [
+      "Load is unevenly distributed across processing cores."
+    ],
+    "repair": [
+      "Distribute processes across the available cores."
+    ],
+    "escape": [
+      "Complete the load-balanced run before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Count total burst time per core, not just process count, when balancing."
+  ]
 }

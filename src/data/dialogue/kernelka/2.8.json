@@ -1,16 +1,34 @@
 {
   "lessonId": "2.8",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Some things move too fast for either of us to referee by hand. The hardware itself has to make the promise instead."
+    ],
+    "fault": [
+      "Two threads read the lock in the same breath. Without an atomic check, that was always going to collide."
+    ],
+    "repair": [
+      "Watch the register trace. One operation, indivisible \u2014 that's what saves you here."
+    ],
+    "escape": [
+      "Trust the atomic instruction \u2014 there's no time to check it twice."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Hardware instructions like test-and-set provide atomic operations for synchronization."
+    ],
+    "fault": [
+      "A non-atomic check-then-act sequence caused a race condition."
+    ],
+    "repair": [
+      "Trace the atomic instruction sequence in the register log."
+    ],
+    "escape": [
+      "Confirm the atomic operation completes correctly."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Look for the single instruction that reads and writes the lock in one step."
+  ]
 }

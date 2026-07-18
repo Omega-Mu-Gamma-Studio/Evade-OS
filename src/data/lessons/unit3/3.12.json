@@ -16,9 +16,49 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "The Banker's Algorithm won't let you take a resource if granting it could ever lead to an unsafe state \u2014 even if nothing's wrong yet.",
+    "fault": "The request you're about to grant leaves no safe sequence for the remaining processes. It's not deadlocked yet \u2014 it's about to be, if you approve it.",
+    "visualizer": {
+      "processes": [
+        {
+          "id": "P1"
+        },
+        {
+          "id": "P2"
+        },
+        {
+          "id": "P3"
+        }
+      ],
+      "resources": [
+        {
+          "id": "R1",
+          "heldBy": [
+            {
+              "id": "P1"
+            }
+          ],
+          "neededBy": [
+            {
+              "id": "P2"
+            }
+          ]
+        },
+        {
+          "id": "R2",
+          "heldBy": [
+            {
+              "id": "P2"
+            }
+          ],
+          "neededBy": [
+            {
+              "id": "P3"
+            }
+          ]
+        }
+      ]
+    }
   },
   "visualComponent": "deadlock-detector",
   "terminalInteraction": null

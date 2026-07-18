@@ -16,9 +16,18 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "You don't need every page loaded to run. Demand paging only pulls a page in from disk the moment it's actually touched.",
+    "fault": "You touched a page that was never loaded. The system has to stop, fetch it from disk, and only then let you continue.",
+    "terminal": {
+      "log": [
+        "[vm] process touches page 5 (not resident)",
+        "[vm] page fault triggered",
+        "[vm] locating page 5 on backing store...",
+        "[vm] frame 2 selected for eviction",
+        "[vm] page 5 loaded into frame 2",
+        "[vm] page table updated, execution resumes"
+      ]
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "log-click"

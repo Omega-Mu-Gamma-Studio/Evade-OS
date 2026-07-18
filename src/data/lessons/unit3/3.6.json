@@ -16,9 +16,40 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "One CPU, one queue. Multiple CPUs means a choice: one shared queue for all of them, or a separate queue per core, balanced by hand.",
+    "fault": "One core is buried in work while two others sit idle. The load never got balanced across the lanes.",
+    "visualizer": {
+      "processes": [
+        {
+          "id": "P1",
+          "name": "P1",
+          "arrivalTime": 0,
+          "burstTime": 5,
+          "priority": 1
+        },
+        {
+          "id": "P2",
+          "name": "P2",
+          "arrivalTime": 0,
+          "burstTime": 5,
+          "priority": 1
+        },
+        {
+          "id": "P3",
+          "name": "P3",
+          "arrivalTime": 0,
+          "burstTime": 5,
+          "priority": 1
+        },
+        {
+          "id": "P4",
+          "name": "P4",
+          "arrivalTime": 0,
+          "burstTime": 5,
+          "priority": 1
+        }
+      ]
+    }
   },
   "visualComponent": "process-viewer",
   "terminalInteraction": null

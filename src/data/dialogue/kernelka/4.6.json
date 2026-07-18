@@ -1,16 +1,34 @@
 {
   "lessonId": "4.6",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "You don't need everything loaded to move. Just what you're touching, right now."
+    ],
+    "fault": [
+      "You reached for something that was never brought up here. The system has to stop and fetch it \u2014 that's not free."
+    ],
+    "repair": [
+      "Watch it load. Disk to frame, frame to page table, then you can continue."
+    ],
+    "escape": [
+      "Every fault costs time we don't have. Move carefully."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Demand paging loads pages from disk only when they are accessed."
+    ],
+    "fault": [
+      "A page fault triggered a load from the backing store."
+    ],
+    "repair": [
+      "Trace the page fault handling sequence."
+    ],
+    "escape": [
+      "Confirm the faulted page loads and execution resumes."
+    ]
   },
-  "hints": []
+  "hints": [
+    "The sequence is always: fault, locate on disk, evict if needed, load, resume."
+  ]
 }

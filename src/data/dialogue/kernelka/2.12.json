@@ -1,16 +1,34 @@
 {
   "lessonId": "2.12",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "This room does something a door can't \u2014 it won't let two of you in together, no matter what either of us forgets."
+    ],
+    "fault": [
+      "You reached for a lock that isn't yours to hold. The room already handles that part."
+    ],
+    "repair": [
+      "Trust the structure. Enter, do your work, leave \u2014 the room enforces the rest."
+    ],
+    "escape": [
+      "Move through cleanly \u2014 the room won't forgive a shortcut."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Monitors provide built-in mutual exclusion for the code they contain."
+    ],
+    "fault": [
+      "An external lock was attempted where a monitor already enforces exclusion."
+    ],
+    "repair": [
+      "Enter and exit the monitor region correctly."
+    ],
+    "escape": [
+      "Complete all required monitor entries before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "The exclusion is automatic here \u2014 focus on what you do inside, not on locking it yourself."
+  ]
 }

@@ -16,9 +16,40 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "There are four ways to deal with a deadlock: prevent it from ever forming, avoid it dynamically, detect it after the fact, or recover once it's happened.",
+    "fault": "You reached for detection when this vault needed prevention. The wrong approach won't save you here \u2014 pick the one that matches the situation.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "prevent",
+          "x": 20,
+          "y": 25,
+          "label": "Prevention",
+          "detail": "Structurally rule out one of the four necessary conditions."
+        },
+        {
+          "id": "avoid",
+          "x": 80,
+          "y": 25,
+          "label": "Avoidance",
+          "detail": "Grant resources only when the resulting state is provably safe."
+        },
+        {
+          "id": "detect",
+          "x": 20,
+          "y": 75,
+          "label": "Detection",
+          "detail": "Let it happen, then find it by scanning the wait-for graph."
+        },
+        {
+          "id": "recover",
+          "x": 80,
+          "y": 75,
+          "label": "Recovery",
+          "detail": "Break an existing deadlock via termination or resource preemption."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

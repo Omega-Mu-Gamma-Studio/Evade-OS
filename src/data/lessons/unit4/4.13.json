@@ -16,9 +16,17 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "Swap space is disk pretending to be memory \u2014 the overflow valve for pages that don't fit in RAM right now.",
+    "fault": "Swap space just filled completely. There's nowhere left to page anything out to, and memory pressure has nowhere to go.",
+    "terminal": {
+      "log": [
+        "[swap] page 12 written to swap slot 0x04",
+        "[swap] page 27 written to swap slot 0x05",
+        "[swap] swap space usage: 94%",
+        "[swap] page 12 read back from swap slot 0x04",
+        "[swap] warning: swap space usage at 100%"
+      ]
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "log-click"

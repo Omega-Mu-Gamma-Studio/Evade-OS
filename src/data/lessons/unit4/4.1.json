@@ -16,9 +16,13 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Nothing fits in memory forever. When space runs short, a process gets swapped out to disk to make room, and swapped back in when it's needed again.",
+    "fault": "You're paging out and the address you were bound to no longer points where you think it does. Binding matters \u2014 and it just shifted under you.",
+    "visualizer": {
+      "frameCount": 4,
+      "pageCount": 8,
+      "algorithm": "fifo"
+    }
   },
   "visualComponent": "memory-mapper",
   "terminalInteraction": null

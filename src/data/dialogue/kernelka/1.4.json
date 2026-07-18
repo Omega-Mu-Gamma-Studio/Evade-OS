@@ -1,16 +1,34 @@
 {
   "lessonId": "1.4",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Not everything needs your full attention. Some transfers, you delegate."
+    ],
+    "fault": [
+      "You tried to carry the whole block yourself. Everything behind you stalled while you did."
+    ],
+    "repair": [
+      "Hand it to the controller. Watch it move the data without you."
+    ],
+    "escape": [
+      "Let go of the transfer. You don't have time to babysit it."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "DMA allows a controller to transfer data without CPU involvement."
+    ],
+    "fault": [
+      "The CPU is blocking on a transfer that should be delegated to DMA."
+    ],
+    "repair": [
+      "Identify how the DMA controller moves data between memory and device."
+    ],
+    "escape": [
+      "Confirm the DMA path before the transfer window closes."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Find the component that talks to memory directly, without going through the CPU."
+  ]
 }

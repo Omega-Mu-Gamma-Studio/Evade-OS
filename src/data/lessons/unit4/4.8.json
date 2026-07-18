@@ -16,9 +16,13 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Frames don't split evenly by accident \u2014 someone decides whether each process gets a fixed share or a variable one based on its needs.",
+    "fault": "One process was granted almost every frame. The rest are thrashing on the few that are left.",
+    "visualizer": {
+      "frameCount": 4,
+      "pageCount": 8,
+      "algorithm": "fifo"
+    }
   },
   "visualComponent": "memory-mapper",
   "terminalInteraction": null

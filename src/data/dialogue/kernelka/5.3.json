@@ -1,16 +1,34 @@
 {
   "lessonId": "5.3",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "One real system, underneath all of this. I don't hide behind the metaphor here \u2014 this is what's actually running us both."
+    ],
+    "fault": [
+      "Someone's running with root when they shouldn't be. That's not a story problem. That's a real one."
+    ],
+    "repair": [
+      "Fix the permission. This part of me doesn't forgive a careless command."
+    ],
+    "escape": [
+      "Get it right the first time. There's no soft landing down here."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Linux manages processes, permissions, and kernel modules directly."
+    ],
+    "fault": [
+      "A process is running with elevated permissions unexpectedly."
+    ],
+    "repair": [
+      "Correct the permission level of the affected process."
+    ],
+    "escape": [
+      "Confirm the permission issue is resolved."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Check which process is running as root and whether it actually needs to be."
+  ]
 }

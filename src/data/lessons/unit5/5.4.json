@@ -16,9 +16,26 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Two very different philosophies for the same problem \u2014 one tightly controlled top to bottom, one open and fragmented by design.",
+    "fault": "You expected the same architecture to explain both. It doesn't. Compare them side by side, not as one system.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "ios",
+          "x": 25,
+          "y": 50,
+          "label": "iOS",
+          "detail": "A closed, vertically integrated architecture \u2014 one vendor, tightly controlled layers."
+        },
+        {
+          "id": "android",
+          "x": 75,
+          "y": 50,
+          "label": "Android",
+          "detail": "An open, Linux-kernel-based architecture with layers customizable across many vendors."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

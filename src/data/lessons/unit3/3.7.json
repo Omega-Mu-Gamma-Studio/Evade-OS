@@ -16,9 +16,33 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Some deadlines aren't suggestions. Miss a hard real-time deadline and the result isn't slow \u2014 it's wrong.",
+    "fault": "A soft-deadline job was scheduled ahead of a hard-deadline job. The hard deadline just passed unmet.",
+    "visualizer": {
+      "processes": [
+        {
+          "id": "P1",
+          "name": "P1(hard)",
+          "arrivalTime": 0,
+          "burstTime": 3,
+          "priority": 1
+        },
+        {
+          "id": "P2",
+          "name": "P2(soft)",
+          "arrivalTime": 0,
+          "burstTime": 4,
+          "priority": 2
+        },
+        {
+          "id": "P3",
+          "name": "P3(hard)",
+          "arrivalTime": 1,
+          "burstTime": 2,
+          "priority": 1
+        }
+      ]
+    }
   },
   "visualComponent": "process-viewer",
   "terminalInteraction": null

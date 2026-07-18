@@ -16,9 +16,33 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "First come, first served. No cleverness, no reordering \u2014 whoever arrived first runs first, start to finish.",
+    "fault": "P1 arrived first with a long burst, and now everyone behind it is stuck waiting through the whole thing. That's the convoy effect.",
+    "visualizer": {
+      "processes": [
+        {
+          "id": "P1",
+          "name": "P1",
+          "arrivalTime": 0,
+          "burstTime": 8,
+          "priority": 2
+        },
+        {
+          "id": "P2",
+          "name": "P2",
+          "arrivalTime": 1,
+          "burstTime": 2,
+          "priority": 1
+        },
+        {
+          "id": "P3",
+          "name": "P3",
+          "arrivalTime": 2,
+          "burstTime": 3,
+          "priority": 3
+        }
+      ]
+    }
   },
   "visualComponent": "process-viewer",
   "terminalInteraction": null

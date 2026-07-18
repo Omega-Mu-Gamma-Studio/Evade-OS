@@ -16,9 +16,18 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "Speed alone doesn't tell you if a scheduler is good. Utilization, throughput, turnaround, waiting time, response time \u2014 five numbers, five different stories.",
+    "fault": "The dashboard shows high utilization and terrible response time at the same time. Whatever's running is hogging the CPU while everyone else starves.",
+    "terminal": {
+      "log": [
+        "[metrics] CPU utilization: 98%",
+        "[metrics] throughput: 2 processes/sec",
+        "[metrics] avg turnaround time: 14.2s",
+        "[metrics] avg waiting time: 11.8s",
+        "[metrics] avg response time: 9.6s",
+        "[metrics] flag: response time exceeds threshold"
+      ]
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "log-click"

@@ -1,16 +1,34 @@
 {
   "lessonId": "3.8",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "I've been in this vault before. Trust me \u2014 watch how they wait on each other."
+    ],
+    "fault": [
+      "There. Feel that? Nothing's moving. That's not a slowdown \u2014 that's a deadlock."
+    ],
+    "repair": [
+      "Find the cycle. Break one edge and everyone breathes again."
+    ],
+    "escape": [
+      "No time to admire it. Scan, find the cycle, move."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Three processes, each holding one resource and requesting another."
+    ],
+    "fault": [
+      "A circular wait has formed. No process can proceed."
+    ],
+    "repair": [
+      "Run the wait-for graph scan to identify the cycle."
+    ],
+    "escape": [
+      "Identify the cycle before the timer expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Follow each process's arrow to the resource it's waiting on \u2014 does the trail loop back?"
+  ]
 }

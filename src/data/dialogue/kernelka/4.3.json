@@ -1,16 +1,34 @@
 {
   "lessonId": "4.3",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "The floor here isn't solid. It's tiles \u2014 pages \u2014 and not all of them are loaded under you at once."
+    ],
+    "fault": [
+      "You just stepped onto a tile that isn't there. That's a page fault. Don't panic \u2014 it just means we go get it."
+    ],
+    "repair": [
+      "Jump carefully. Watch which pages are actually loaded before you land."
+    ],
+    "escape": [
+      "Don't page out mid-jump. I need you grounded when it matters."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Paging maps logical pages to physical frames via a page table."
+    ],
+    "fault": [
+      "A page fault occurred when accessing a non-resident page."
+    ],
+    "repair": [
+      "Trace the page table to identify resident and non-resident pages."
+    ],
+    "escape": [
+      "Confirm all required page accesses succeed."
+    ]
   },
-  "hints": []
+  "hints": [
+    "A page fault isn't a crash \u2014 it's a signal to load the page and continue."
+  ]
 }

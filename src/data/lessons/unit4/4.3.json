@@ -16,9 +16,13 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Break memory into fixed-size pages and frames instead of one continuous block. A page table maps each page to wherever its frame actually lives.",
+    "fault": "You tried to jump to a page that isn't in a frame right now. That's a page fault \u2014 the floor you were standing on isn't loaded.",
+    "visualizer": {
+      "frameCount": 4,
+      "pageCount": 8,
+      "algorithm": "fifo"
+    }
   },
   "visualComponent": "memory-mapper",
   "terminalInteraction": null

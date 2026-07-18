@@ -1,16 +1,34 @@
 {
   "lessonId": "3.1",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Faster isn't the whole score here. Watch all five numbers, not just the one that looks good."
+    ],
+    "fault": [
+      "High utilization, terrible response. Something's hogging the Core while the rest of you starve."
+    ],
+    "repair": [
+      "Read the dashboard. Find which number is lying to you."
+    ],
+    "escape": [
+      "No time to study it slowly. Call the flag before it scrolls past."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Scheduling criteria include utilization, throughput, turnaround, waiting, and response time."
+    ],
+    "fault": [
+      "A metric has exceeded its acceptable threshold."
+    ],
+    "repair": [
+      "Identify which scheduling metric is degraded."
+    ],
+    "escape": [
+      "Confirm the flagged metric before the trace ends."
+    ]
   },
-  "hints": []
+  "hints": [
+    "High utilization doesn't guarantee good response time \u2014 check both."
+  ]
 }

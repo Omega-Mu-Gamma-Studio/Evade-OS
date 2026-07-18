@@ -1,16 +1,34 @@
 {
   "lessonId": "3.11",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "If I can guarantee just one of the four conditions never holds, this vault can't trap us. That's the whole strategy."
+    ],
+    "fault": [
+      "You're still letting a process hold one thing while waiting on another. That's hold-and-wait, still alive, still dangerous."
+    ],
+    "repair": [
+      "Force it \u2014 grant everything at once, or nothing at all."
+    ],
+    "escape": [
+      "Hold the line on all-or-nothing allocation. Don't let it slip back."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Deadlock prevention structurally eliminates one of the four necessary conditions."
+    ],
+    "fault": [
+      "The hold-and-wait condition is still present in the allocation policy."
+    ],
+    "repair": [
+      "Apply an all-or-nothing resource allocation policy."
+    ],
+    "escape": [
+      "Confirm the prevention policy is enforced."
+    ]
   },
-  "hints": []
+  "hints": [
+    "All-or-nothing allocation directly removes the possibility of holding while waiting."
+  ]
 }

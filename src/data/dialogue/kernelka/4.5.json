@@ -1,16 +1,34 @@
 {
   "lessonId": "4.5",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Both at once here \u2014 segments for meaning, pages inside each one for flexibility. Don't lose track of which segment you're paging within."
+    ],
+    "fault": [
+      "You paged correctly but forgot the segment it belongs to. An address without its segment means nothing up here."
+    ],
+    "repair": [
+      "Hold both pieces together. Segment first, then page within it."
+    ],
+    "escape": [
+      "Don't drop the segment context \u2014 the page alone won't save you."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Segmentation with paging combines segment-level structure with page-level allocation."
+    ],
+    "fault": [
+      "A page reference is missing its segment context."
+    ],
+    "repair": [
+      "Resolve each address using both segment and page information."
+    ],
+    "escape": [
+      "Confirm all addresses resolve correctly."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Every address here needs two coordinates: which segment, then which page within it."
+  ]
 }

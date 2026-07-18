@@ -1,16 +1,34 @@
 {
   "lessonId": "4.4",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Not every zone up here behaves the same. Code holds still. Data moves. Know which floor you're standing on."
+    ],
+    "fault": [
+      "You tried to write into the code zone. That floor doesn't allow that \u2014 you're in the wrong segment for what you're trying to do."
+    ],
+    "repair": [
+      "Match the action to the segment. Code, data, stack \u2014 each has its own rules."
+    ],
+    "escape": [
+      "Stay in the right segment. I can't protect you from the wrong zone's rules."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Segmentation divides memory into logically meaningful segments."
+    ],
+    "fault": [
+      "An operation violated the access rules of its segment."
+    ],
+    "repair": [
+      "Match each operation to its correct segment."
+    ],
+    "escape": [
+      "Confirm all operations respect segment boundaries."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Code segments are typically read/execute only \u2014 writes belong in the data segment."
+  ]
 }

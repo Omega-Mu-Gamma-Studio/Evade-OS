@@ -1,16 +1,34 @@
 {
   "lessonId": "3.2",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "First in line, first through the Core. No favorites here \u2014 just the order you showed up."
+    ],
+    "fault": [
+      "P1 got here first and it's a long one. Everyone behind it just has to sit there."
+    ],
+    "repair": [
+      "Run the order. Watch what a long first job costs everyone else."
+    ],
+    "escape": [
+      "Faster now. The scheduler is greedy and it isn't slowing down for you."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "FCFS scheduling runs processes strictly in arrival order."
+    ],
+    "fault": [
+      "A long process is blocking shorter processes behind it (convoy effect)."
+    ],
+    "repair": [
+      "Run the Gantt chart in arrival order."
+    ],
+    "escape": [
+      "Complete the scheduling run before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Arrival order is the only thing that matters here \u2014 burst time doesn't reorder anything."
+  ]
 }

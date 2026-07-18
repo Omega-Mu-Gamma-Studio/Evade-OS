@@ -1,16 +1,34 @@
 {
   "lessonId": "2.11",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "This exact shape repeats everywhere \u2014 someone filling a buffer, someone else draining it. You've seen this before, even if you don't remember it."
+    ],
+    "fault": [
+      "The buffer overflowed. Nobody checked before writing, and now it's holding more than it can."
+    ],
+    "repair": [
+      "Balance it. Producer, consumer, one full cycle at a time."
+    ],
+    "escape": [
+      "Keep the cycle balanced \u2014 don't let it overflow again."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Classic synchronization problems include producer-consumer, readers-writers, and dining philosophers."
+    ],
+    "fault": [
+      "The shared buffer has exceeded its capacity."
+    ],
+    "repair": [
+      "Balance production and consumption to complete a full cycle."
+    ],
+    "escape": [
+      "Complete the required number of cycles before time expires."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Watch the buffer level \u2014 it should never go above capacity or below zero."
+  ]
 }

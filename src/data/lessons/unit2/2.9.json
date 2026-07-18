@@ -16,9 +16,11 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "A mutex is the door made formal \u2014 lock it on entry, unlock it on exit. Simple, as long as everyone remembers the unlock.",
+    "fault": "Someone locked the door and never came back to unlock it. Everyone else is still standing outside.",
+    "visualizer": {
+      "requiredCrossings": 4
+    }
   },
   "visualComponent": "door-gate",
   "terminalInteraction": null

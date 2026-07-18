@@ -16,9 +16,19 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "Some problems are too fast for software alone to referee. The hardware itself can guarantee an operation happens as one indivisible step.",
+    "fault": "Two threads both read the lock as free in the same instant. Without an atomic instruction underneath, that race was inevitable.",
+    "terminal": {
+      "log": [
+        "[reg] thread A: TEST_AND_SET(lock) -> old=0, lock=1",
+        "[reg] thread A acquires critical section",
+        "[reg] thread B: TEST_AND_SET(lock) -> old=1, lock=1",
+        "[reg] thread B spins, retrying...",
+        "[reg] thread A: exits critical section, lock=0",
+        "[reg] thread B: TEST_AND_SET(lock) -> old=0, lock=1",
+        "[reg] thread B acquires critical section"
+      ]
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "log-click"

@@ -16,9 +16,12 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Two threads, one shared value. As long as they take turns cleanly, nothing goes wrong.",
+    "fault": "They didn't take turns. Both threads read the same value before either wrote it back \u2014 and now the result depends on luck, not logic.",
+    "visualizer": {
+      "capacity": 3,
+      "requiredCycles": 3
+    }
   },
   "visualComponent": "multi-avatar-puzzle",
   "terminalInteraction": null

@@ -16,9 +16,13 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Give each process one continuous block of memory. Simple to manage, until the blocks stop fitting together cleanly.",
+    "fault": "The gaps between allocated blocks are too small and too scattered to fit the next process, even though the total free space is enough. That's external fragmentation.",
+    "visualizer": {
+      "frameCount": 4,
+      "pageCount": 8,
+      "algorithm": "fifo"
+    }
   },
   "visualComponent": "memory-mapper",
   "terminalInteraction": null

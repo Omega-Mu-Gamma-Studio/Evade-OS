@@ -16,9 +16,33 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Everyone gets a slice, then it's the next one's turn \u2014 over and over, in a fixed quantum, until everyone's done.",
+    "fault": "The quantum was set too large. P1 held the CPU so long the round-robin stopped looking any different from first-come-first-served.",
+    "visualizer": {
+      "processes": [
+        {
+          "id": "P1",
+          "name": "P1",
+          "arrivalTime": 0,
+          "burstTime": 5,
+          "priority": 1
+        },
+        {
+          "id": "P2",
+          "name": "P2",
+          "arrivalTime": 0,
+          "burstTime": 4,
+          "priority": 1
+        },
+        {
+          "id": "P3",
+          "name": "P3",
+          "arrivalTime": 0,
+          "burstTime": 6,
+          "priority": 1
+        }
+      ]
+    }
   },
   "visualComponent": "process-viewer",
   "terminalInteraction": null

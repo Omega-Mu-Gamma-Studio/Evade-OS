@@ -16,9 +16,40 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "The closer memory sits to the CPU, the faster it answers and the less of it there is. That's not a design flaw \u2014 it's the whole strategy.",
+    "fault": "You asked for a value the cache didn't have. That's a miss \u2014 and now you're paying the price of a much slower level.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "reg",
+          "x": 50,
+          "y": 10,
+          "label": "Registers",
+          "detail": "Fastest possible access, inside the CPU itself. Tiny capacity \u2014 a handful of values."
+        },
+        {
+          "id": "l1",
+          "x": 50,
+          "y": 32,
+          "label": "Cache (L1/L2/L3)",
+          "detail": "Small, fast memory that keeps recently-used data close to the CPU."
+        },
+        {
+          "id": "ram",
+          "x": 50,
+          "y": 58,
+          "label": "Main Memory (RAM)",
+          "detail": "Larger and slower than cache, but still far faster than disk."
+        },
+        {
+          "id": "disk",
+          "x": 50,
+          "y": 85,
+          "label": "Disk / Secondary Storage",
+          "detail": "Huge capacity, huge latency compared to everything above it."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

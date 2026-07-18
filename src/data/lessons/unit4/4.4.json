@@ -16,9 +16,13 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Segmentation splits memory by meaning, not by fixed size \u2014 code here, data there, stack somewhere else, each its own segment.",
+    "fault": "You walked into the code segment expecting to write to it. Code segments don't allow that \u2014 you're in the wrong zone for this action.",
+    "visualizer": {
+      "frameCount": 4,
+      "pageCount": 8,
+      "algorithm": "fifo"
+    }
   },
   "visualComponent": "memory-mapper",
   "terminalInteraction": null

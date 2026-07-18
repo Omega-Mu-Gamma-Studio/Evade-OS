@@ -1,16 +1,34 @@
 {
   "lessonId": "3.12",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "I won't let you take something if it could ever trap us later. Even if nothing's wrong yet \u2014 I check first."
+    ],
+    "fault": [
+      "That request looks fine now. But grant it, and there's no safe path left for the rest of us. I'm not approving it."
+    ],
+    "repair": [
+      "Test the request against every possible safe sequence before granting anything."
+    ],
+    "escape": [
+      "Check it fast, but check it. An unsafe grant now traps us later."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "The Banker's Algorithm grants requests only if the resulting state is safe."
+    ],
+    "fault": [
+      "A pending request would result in an unsafe state if granted."
+    ],
+    "repair": [
+      "Test the request against the safety algorithm before granting."
+    ],
+    "escape": [
+      "Confirm only safe requests are granted."
+    ]
   },
-  "hints": []
+  "hints": [
+    "A state is safe only if there exists some order in which every process could finish."
+  ]
 }

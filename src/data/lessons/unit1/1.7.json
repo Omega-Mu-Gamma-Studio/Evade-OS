@@ -16,9 +16,11 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "You don't get to touch hardware directly. You ask the kernel, through a system call, and it decides whether to grant it.",
+    "fault": "You tried to act directly on the system and were refused. There's exactly one door in, and it isn't the one you tried.",
+    "terminal": {
+      "requiredCalls": 2
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "type"

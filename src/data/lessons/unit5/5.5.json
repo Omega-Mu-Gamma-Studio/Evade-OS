@@ -1,7 +1,7 @@
 {
   "id": "5.5",
   "unit": 5,
-  "title": "Mobile OS — iOS",
+  "title": "Mobile OS \u2014 iOS",
   "zone": null,
   "presentationMode": "visual",
   "phases": [
@@ -16,9 +16,40 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "visualizer": {}
+    "observe": "Cocoa Touch at the top, then Media, then Core Services, then the Core OS layer closest to the hardware \u2014 each layer built on the one beneath it.",
+    "fault": "An app tried to call straight down to the Core OS layer, skipping every layer meant to mediate that access. That's not how this is supposed to work.",
+    "visualizer": {
+      "hotspots": [
+        {
+          "id": "sdk",
+          "x": 50,
+          "y": 15,
+          "label": "Cocoa Touch (SDK)",
+          "detail": "The application-facing framework layer developers build against."
+        },
+        {
+          "id": "media",
+          "x": 50,
+          "y": 38,
+          "label": "Media Layer",
+          "detail": "Graphics, audio, and video frameworks."
+        },
+        {
+          "id": "services",
+          "x": 50,
+          "y": 61,
+          "label": "Core Services",
+          "detail": "Fundamental system services: networking, location, core data."
+        },
+        {
+          "id": "coreos",
+          "x": 50,
+          "y": 84,
+          "label": "Core OS",
+          "detail": "The lowest layer \u2014 kernel, drivers, and direct hardware access."
+        }
+      ]
+    }
   },
   "visualComponent": "hotspot-diagram",
   "terminalInteraction": null

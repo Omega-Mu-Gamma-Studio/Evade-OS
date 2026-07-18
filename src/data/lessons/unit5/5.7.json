@@ -16,9 +16,17 @@
     "normal": "TBD"
   },
   "content": {
-    "observe": "TBD",
-    "fault": "TBD",
-    "terminal": {}
+    "observe": "There's one call left. Not fork, not exec, not exit \u2014 something final. A call that ends this system and lets you leave it.",
+    "fault": "You hesitated at the door. There's no partial version of this call. It's this, completely, or you stay.",
+    "terminal": {
+      "log": [
+        "[final] all subsystems verified: scheduler, memory, storage, VM layer",
+        "[final] Kernel-ka: 'I've been waiting 15 years for you.'",
+        "[final] preparing irreversible system call...",
+        "[final] awaiting confirmation"
+      ],
+      "requiredCalls": 1
+    }
   },
   "visualComponent": null,
   "terminalInteraction": "mixed"

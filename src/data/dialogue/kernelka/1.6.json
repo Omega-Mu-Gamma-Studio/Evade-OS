@@ -1,16 +1,34 @@
 {
   "lessonId": "1.6",
   "story": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "This world wasn't always shaped like this. Every rule you're learning was a scar first."
+    ],
+    "fault": [
+      "You assumed it always managed things this way. It didn't \u2014 something broke, and this is the fix."
+    ],
+    "repair": [
+      "Walk the timeline. Each era exists because the one before it failed somewhere."
+    ],
+    "escape": [
+      "No time for the whole history. Name the era that matters right now."
+    ]
   },
   "normal": {
-    "observe": [],
-    "fault": [],
-    "repair": [],
-    "escape": []
+    "observe": [
+      "Operating systems evolved through distinct eras: batch, multiprogramming, time-sharing, modern."
+    ],
+    "fault": [
+      "An assumption about OS functionality doesn't match its actual historical origin."
+    ],
+    "repair": [
+      "Review each era and the problem it was designed to solve."
+    ],
+    "escape": [
+      "Identify the correct era before the timeline closes."
+    ]
   },
-  "hints": []
+  "hints": [
+    "Each era's OS did less than the one after it \u2014 work backward from what's missing."
+  ]
 }
