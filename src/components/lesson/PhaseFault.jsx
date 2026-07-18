@@ -14,7 +14,7 @@ export default function PhaseFault({ lesson, onObjectiveComplete }) {
         onClick={onObjectiveComplete}
         style={{ marginTop: '1.2em', padding: '0.4em 1em', borderRadius: 4, background: 'transparent', border: '1px solid #FF0033', color: '#FF0033', cursor: 'pointer' }}
       >
-        I see the failure \u2014 continue
+        I see the failure — continue
       </button>
     </div>
   );

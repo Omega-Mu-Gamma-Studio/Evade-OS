@@ -14,7 +14,7 @@ export default function PhaseObserver({ lesson, onObjectiveComplete }) {
         onClick={onObjectiveComplete}
         style={{ marginTop: '1.2em', padding: '0.4em 1em', borderRadius: 4, background: 'transparent', border: '1px solid var(--accent-primary)', color: 'var(--accent-primary)', cursor: 'pointer' }}
       >
-        Understood \u2014 continue
+        Understood — continue
       </button>
     </div>
   );

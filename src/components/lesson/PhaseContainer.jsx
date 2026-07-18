@@ -47,7 +47,7 @@ export default function PhaseContainer({ lesson, onLessonComplete }) {
   }, [lesson.id]);
 
   if (lessonId !== lesson.id || phases.length === 0) {
-    return <div style={{ padding: '2rem', opacity: 0.5 }}>Loading lesson\u2026</div>;
+    return <div style={{ padding: '2rem', opacity: 0.5 }}>Loading lesson…</div>;
   }
 
   const phase = phases[phaseIndex];
