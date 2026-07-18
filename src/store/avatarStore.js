@@ -19,7 +19,7 @@ export const useAvatarStore = create(
       setVisualState: (visualState) => set({ visualState }),
     }),
     {
-      name: 'escape-os-avatar',
+      name: 'evade-os-avatar',
       partialize: (state) => ({ color: state.color, shape: state.shape }), // don't persist transient visualState
     }
   )

@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '2rem', textAlign: 'center', padding: '2rem' }}>
       <div>
-        <h1 style={{ fontSize: '2.2rem', letterSpacing: '0.08em', marginBottom: '0.4em' }}>ESCAPE-OS</h1>
+        <h1 style={{ fontSize: '2.2rem', letterSpacing: '0.08em', marginBottom: '0.4em' }}>EVADE OS</h1>
         <p style={{ opacity: 0.6, fontStyle: 'italic', maxWidth: 480 }}>
           "Every professor here teaches the exact same material. Pick whoever makes you want to show up to class."
         </p>

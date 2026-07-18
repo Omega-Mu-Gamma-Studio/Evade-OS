@@ -1,8 +1,8 @@
-# Escape-OS
+# Evade OS
 
 > *"Your survival is the syllabus."*
 
-**Escape-OS** (in-fiction title: **Kernel-ka's Bunker**) is a narrative-driven,
+**Evade OS** (in-fiction title: **Kernel-ka's Bunker**) is a narrative-driven,
 gamified learning environment for **CS22403 — Operating Systems**, built by
 **Omega Mu Gamma Studio**.
 

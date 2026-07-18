@@ -31,7 +31,7 @@ export const useRapportStore = create(
         return Math.max(0, Math.min(1, Math.abs(score) / 20));
       },
     }),
-    { name: 'escape-os-rapport' }
+    { name: 'evade-os-rapport' }
   )
 );
 

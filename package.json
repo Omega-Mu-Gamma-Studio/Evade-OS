@@ -1,8 +1,8 @@
 {
-  "name": "escape-os",
+  "name": "evade-os",
   "version": "0.0.1",
   "private": true,
-  "description": "Escape-OS (a.k.a. Kernel-ka's Bunker) \u2014 narrative-driven gamified OS learning environment for CS22403.",
+  "description": "Evade OS (a.k.a. Kernel-ka's Bunker) \u2014 narrative-driven gamified OS learning environment for CS22403.",
   "type": "module",
   "scripts": {
     "dev": "vite",

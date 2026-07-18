@@ -56,7 +56,7 @@ export const useProgressStore = create(
         return isZoneComplete(realmNum, zoneLessonIdsByZone[prevZone] || []);
       },
     }),
-    { name: 'escape-os-progress' }
+    { name: 'evade-os-progress' }
   )
 );
 
