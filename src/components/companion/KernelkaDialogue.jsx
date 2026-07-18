@@ -35,23 +35,16 @@ export default function KernelkaDialogue({ phase, mode, lines, onDismissed }) {
   };
 
   return (
-    <div
-      onClick={handleAdvance}
-      style={{
-        display: 'flex', gap: '1rem', alignItems: 'center', cursor: 'pointer',
-        background: 'rgba(0,0,0,0.55)', border: '1px solid var(--accent-primary)',
-        borderRadius: 8, padding: '1rem 1.25rem', maxWidth: 640,
-      }}
-    >
-      <RapportPanel size={64} />
-      <div style={{ flex: 1 }}>
-        <div style={{ fontSize: '0.7rem', color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.3em' }}>
+    <div className="evade-dialogue-bar" onClick={handleAdvance}>
+      <RapportPanel size={40} />
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ fontSize: '0.65rem', color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '0.25em' }}>
           Kernel-ka
         </div>
         <p style={{ margin: 0, lineHeight: 1.4 }}>{script[index]}</p>
-        <div style={{ marginTop: '0.5em', fontSize: '0.7rem', opacity: 0.5 }}>
-          {isLast ? 'click to continue \u2192' : `click for more (${index + 1}/${script.length})`}
-        </div>
+      </div>
+      <div style={{ fontSize: '0.7rem', opacity: 0.5, flexShrink: 0, whiteSpace: 'nowrap' }}>
+        {isLast ? 'click \u23f5' : `more (${index + 1}/${script.length}) \u23f5`}
       </div>
     </div>
   );

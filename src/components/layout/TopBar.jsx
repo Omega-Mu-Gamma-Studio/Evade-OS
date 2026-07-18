@@ -15,8 +15,10 @@ export default function TopBar({ title, phases = null, phaseIndex = 0, timerSeco
       <div
         style={{
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          padding: '0.75rem 1.25rem', borderBottom: '1px solid rgba(255,255,255,0.1)',
+          padding: '0.75rem 1.25rem',
           background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(4px)',
+          borderBottom: '1px solid transparent',
+          borderImage: 'var(--evade-gradient-diagonal) 1',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', minWidth: 0 }}>
@@ -29,7 +31,7 @@ export default function TopBar({ title, phases = null, phaseIndex = 0, timerSeco
               ⌂
             </button>
           )}
-          <span style={{ fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+          <span className="evade-gradient-text" style={{ fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
             {title}
           </span>
         </div>

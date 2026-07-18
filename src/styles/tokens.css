@@ -52,4 +52,16 @@
   --realm-5-primary: #00CCFF;
   --realm-5-secondary: #FFFFFF;
   --realm-5-bg: #0A0F14;
+
+  /* --- Gradient / bezel aesthetic (Section 2 UI pass) ---------------------
+     Derived from the active realm's --accent-primary / --accent-secondary,
+     which are already set at the route level via useRealmPalette. Nothing
+     here hardcodes a realm's hex — same rule as the rest of this file. */
+  --evade-gradient-diagonal: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  --evade-gradient-glow: radial-gradient(circle at 50% 30%, color-mix(in srgb, var(--accent-primary) 22%, transparent), transparent 70%);
+  --evade-bezel-bg: #0A0A0F;
+  --evade-bezel-border: color-mix(in srgb, var(--accent-primary) 55%, transparent);
+  --evade-scanline: repeating-linear-gradient(rgba(255, 255, 255, 0.025) 0px, transparent 1px, transparent 3px);
+  --evade-grid-paper: linear-gradient(color-mix(in srgb, var(--accent-primary) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--accent-primary) 7%, transparent) 1px, transparent 1px);
 }

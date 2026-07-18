@@ -16,39 +16,72 @@ export default function Sidebar({ collapsed = false, onToggle }) {
     <div
       style={{
         width: collapsed ? 48 : 200, transition: 'width 160ms ease', overflow: 'hidden',
-        borderRight: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.3)',
-        display: 'flex', flexDirection: 'column', padding: '0.75rem 0.5rem', gap: '0.4rem',
+        borderRight: '1px solid color-mix(in srgb, var(--accent-primary) 20%, transparent)',
+        background: 'rgba(0,0,0,0.3)', fontFamily: 'var(--font-terminal)', fontSize: '11px',
+        display: 'flex', flexDirection: 'column', padding: '0.85rem 0.6rem', gap: '1rem',
       }}
     >
-      <button onClick={onToggle} style={{ background: 'none', border: 'none', color: 'var(--ink-white)', cursor: 'pointer', textAlign: 'left' }}>
-        {collapsed ? '»' : '« Realms'}
+      <button
+        onClick={onToggle}
+        style={{
+          background: 'none', border: 'none', color: 'var(--accent-primary)', cursor: 'pointer',
+          textAlign: 'left', display: 'flex', alignItems: 'center', gap: '0.5em',
+        }}
+      >
+        <span aria-hidden="true">⌂</span>
+        {!collapsed && <span>hub</span>}
       </button>
-      {!collapsed &&
-        units.map((unit) => {
-          const unlocked = isRealmUnlocked(unit.realmNum, allLessonIds);
-          return (
-            <button
-              key={unit.realmNum}
-              disabled={!unlocked}
-              onClick={() => navigate(`/hub#realm-${unit.realmNum}`)}
-              style={{
-                background: 'none', border: 'none', textAlign: 'left', padding: '0.4em 0.2em',
-                color: unlocked ? 'var(--ink-white)' : 'rgba(255,255,255,0.25)',
-                cursor: unlocked ? 'pointer' : 'not-allowed', fontSize: '0.85rem',
-              }}
-            >
-              {unit.realmNum}. {unit.title}
-            </button>
-          );
-        })}
+
       {!collapsed && (
-        <button
-          onClick={() => navigate('/settings')}
-          style={{ marginTop: 'auto', background: 'none', border: 'none', color: 'var(--accent-primary)', cursor: 'pointer', textAlign: 'left' }}
-        >
-          ⚙ Settings
-        </button>
+        <div>
+          <div style={{ opacity: 0.5, marginBottom: '0.5em', letterSpacing: '0.05em' }}>realms</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.55em' }}>
+            {units.map((unit) => {
+              const unlocked = isRealmUnlocked(unit.realmNum, allLessonIds);
+              const dotColor = unit.accent?.primary ?? 'rgba(255,255,255,0.3)';
+              return (
+                <button
+                  key={unit.realmNum}
+                  disabled={!unlocked}
+                  onClick={() => navigate(`/hub#realm-${unit.realmNum}`)}
+                  style={{
+                    background: 'none', border: 'none', textAlign: 'left', padding: 0,
+                    display: 'flex', alignItems: 'center', gap: '0.5em',
+                    color: unlocked ? 'var(--ink-white)' : 'rgba(255,255,255,0.25)',
+                    cursor: unlocked ? 'pointer' : 'not-allowed',
+                  }}
+                >
+                  <span
+                    style={{
+                      width: 6, height: 6, borderRadius: '50%', flexShrink: 0,
+                      background: unlocked ? dotColor : 'transparent',
+                      border: unlocked ? 'none' : `1px solid ${dotColor}`,
+                      boxShadow: unlocked ? `0 0 5px ${dotColor}` : 'none',
+                    }}
+                  />
+                  {unit.realmNum}. {unit.title}
+                </button>
+              );
+            })}
+          </div>
+        </div>
       )}
+
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5em', opacity: collapsed ? 0 : 1 }}>
+        <span aria-hidden="true">≡</span>
+        {!collapsed && <span>lessons</span>}
+      </div>
+
+      <button
+        onClick={() => navigate('/settings')}
+        style={{
+          marginTop: 'auto', background: 'none', border: 'none', color: 'var(--accent-primary)',
+          cursor: 'pointer', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '0.5em',
+        }}
+      >
+        <span aria-hidden="true">⚙</span>
+        {!collapsed && <span>settings</span>}
+      </button>
     </div>
   );
 }

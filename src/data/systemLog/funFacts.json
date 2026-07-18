@@ -1,0 +1,20 @@
+{
+  "general": [
+    "The first interrupt controllers date to the 1950s UNIVAC \u2014 this bunker is older logic than you think.",
+    "UNIX time will roll over its 32-bit signed counter in 2038 \u2014 the original Y2K, replayed.",
+    "The term \"bug\" predates software: Grace Hopper's team logged an actual moth jamming a relay in 1947.",
+    "Early mainframes were programmed by physically rewiring plugboards \u2014 no keyboard, just cables.",
+    "The banker's algorithm for deadlock avoidance is named for the exact problem it solves: never promise more credit than you can cover.",
+    "Some early OSes ran with no memory protection at all \u2014 one crashing program could take down everything.",
+    "Round robin scheduling was popularized by time-sharing systems in the 1960s, when one computer had to feel instant to dozens of people at once.",
+    "The first disk drive, IBM's RAMAC, held about 5MB across fifty spinning platters the size of dinner plates."
+  ],
+  "byLesson": {
+    "1.1": [
+      "The system bus concept dates back to the PDP-8 in 1965 \u2014 one shared highway, every component takes a turn."
+    ],
+    "1.2": [
+      "Interrupts exist because polling every device in a loop would waste most of a CPU's cycles waiting on nothing."
+    ]
+  }
+}

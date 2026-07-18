@@ -6,9 +6,11 @@
 //
 // Phase progression rule (strict, sequential):
 //   dialogue plays -> dismissed -> interaction unlocks -> objective done -> Continue -> next phase
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import TopBar from '../layout/TopBar.jsx';
+import Sidebar from '../layout/Sidebar.jsx';
 import KernelkaDialogue from '../companion/KernelkaDialogue.jsx';
+import SystemLogPanel from './SystemLogPanel.jsx';
 import Button from '../ui/Button.jsx';
 import PhaseObserver from './PhaseObserver.jsx';
 import PhaseFault from './PhaseFault.jsx';
@@ -32,6 +34,7 @@ export default function PhaseContainer({ lesson, onLessonComplete }) {
   const mode = useProgressStore((s) => s.mode);
   const completeLesson = useProgressStore((s) => s.completeLesson);
   const nudgeRapport = useRapportStore((s) => s.nudge);
+  const [navCollapsed, setNavCollapsed] = useState(false);
 
   const {
     lessonId, phases, phaseIndex, dialogueDismissed, objectiveComplete, hintActive,
@@ -62,15 +65,50 @@ export default function PhaseContainer({ lesson, onLessonComplete }) {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <TopBar
-        title={`${lesson.id} \u2014 ${lesson.title}`}
-        phases={phases}
-        phaseIndex={phaseIndex}
-        timerSeconds={phase === 'escape' ? ESCAPE_TIMER_SECONDS : null}
-      />
+    <div style={{ padding: '1.25rem', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <div className="evade-frame" style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+        <span className="evade-corner-dot evade-corner-dot--tl" />
+        <span className="evade-corner-dot evade-corner-dot--tr" />
+        <span className="evade-corner-dot evade-corner-dot--bl" />
+        <span className="evade-corner-dot evade-corner-dot--br" />
 
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '1.5rem', padding: '2rem', maxWidth: 860, margin: '0 auto', width: '100%' }}>
+        <TopBar
+          title={`${lesson.id} \u2014 ${lesson.title}`}
+          phases={phases}
+          phaseIndex={phaseIndex}
+          timerSeconds={phase === 'escape' ? ESCAPE_TIMER_SECONDS : null}
+        />
+
+        <div className="evade-lesson-grid" style={{ flex: 1 }}>
+          <Sidebar collapsed={navCollapsed} onToggle={() => setNavCollapsed((c) => !c)} />
+
+          <div className="evade-canvas">
+            {dialogueDismissed && (
+              <>
+                {hintActive && (
+                  <div style={{ marginBottom: '1rem', padding: '0.75em 1em', border: '1px solid #FFCC00', borderRadius: 6, background: 'rgba(255,204,0,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ fontSize: '0.85rem' }}>
+                      Kernel-ka: "{dialogueData?.hints?.length ? dialogueData.hints[0] : 'Stuck? Look again at what just changed.'}"
+                    </span>
+                    <button onClick={dismissHint} style={{ background: 'none', border: 'none', color: '#FFCC00', cursor: 'pointer' }}>dismiss</button>
+                  </div>
+                )}
+                <PhaseComponent lesson={lesson} onObjectiveComplete={markObjectiveComplete} />
+              </>
+            )}
+
+            {objectiveComplete && (
+              <div style={{ marginTop: 'auto', paddingTop: '1rem', display: 'flex', justifyContent: 'flex-end' }}>
+                <Button onClick={handleContinue}>
+                  {phaseIndex >= phases.length - 1 ? 'Complete Lesson' : 'Continue \u2192'}
+                </Button>
+              </div>
+            )}
+          </div>
+
+          <SystemLogPanel lessonId={lesson.id} />
+        </div>
+
         <KernelkaDialogue
           key={`${lesson.id}-${phase}`}
           phase={phase}
@@ -78,28 +116,6 @@ export default function PhaseContainer({ lesson, onLessonComplete }) {
           lines={dialogueLines}
           onDismissed={dismissDialogue}
         />
-
-        {dialogueDismissed && (
-          <>
-            {hintActive && (
-              <div style={{ padding: '0.75em 1em', border: '1px solid #FFCC00', borderRadius: 6, background: 'rgba(255,204,0,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.85rem' }}>
-                  Kernel-ka: "{dialogueData?.hints?.length ? dialogueData.hints[0] : 'Stuck? Look again at what just changed.'}"
-                </span>
-                <button onClick={dismissHint} style={{ background: 'none', border: 'none', color: '#FFCC00', cursor: 'pointer' }}>dismiss</button>
-              </div>
-            )}
-            <PhaseComponent lesson={lesson} onObjectiveComplete={markObjectiveComplete} />
-          </>
-        )}
-
-        {objectiveComplete && (
-          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Button onClick={handleContinue}>
-              {phaseIndex >= phases.length - 1 ? 'Complete Lesson' : 'Continue \u2192'}
-            </Button>
-          </div>
-        )}
       </div>
     </div>
   );

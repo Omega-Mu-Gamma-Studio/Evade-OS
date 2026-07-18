@@ -3,6 +3,9 @@
 // Everything else (stores, pages, components) should go through this rather than
 // importing data JSON directly, so the loading strategy can change in one place.
 
+import funFactsData from '../data/systemLog/funFacts.json';
+import loreData from '../data/systemLog/lore.json';
+
 const lessonModules = import.meta.glob('../data/lessons/unit*/*.json', { eager: true });
 const unitModules = import.meta.glob('../data/units/unit*.json', { eager: true });
 const dialogueModules = import.meta.glob('../data/dialogue/kernelka/*.json', { eager: true });
@@ -87,4 +90,31 @@ export function getDialogue(lessonId) {
 
 export function getAllEntities() {
   return Object.values(entityModules).map(unwrap);
+}
+
+// --- System Log (fun facts + lore) --------------------------------------------
+// Section 2 UI pass. Fun facts are lesson-tied when the lesson has one authored,
+// otherwise a stable pick from the general pool (stable per lessonId, so it
+// doesn't reshuffle on every re-render of the same lesson). Lore unlocks
+// sequentially with completed-lesson count, looping once the entries run out.
+
+function stablePick(list, seedString) {
+  if (!list || list.length === 0) return null;
+  let hash = 0;
+  for (let i = 0; i < seedString.length; i += 1) hash = (hash * 31 + seedString.charCodeAt(i)) >>> 0;
+  return list[hash % list.length];
+}
+
+/** @returns {string} a fun fact for this lesson — lesson-tied if authored, else general pool */
+export function getFunFact(lessonId) {
+  const tied = funFactsData.byLesson?.[lessonId];
+  if (tied && tied.length > 0) return stablePick(tied, lessonId);
+  return stablePick(funFactsData.general, lessonId) ?? '';
+}
+
+/** @returns {{id: string, text: string}} the next lore entry, keyed off completed-lesson count */
+export function getLoreEntry(completedCount = 0) {
+  const entries = loreData.entries ?? [];
+  if (entries.length === 0) return null;
+  return entries[completedCount % entries.length];
 }
