@@ -15,5 +15,7 @@
     "story": "TBD",
     "normal": "TBD"
   },
-  "content": "TBD"
+  "content": "TBD",
+  "visualComponent": null,
+  "terminalInteraction": "type"
 }

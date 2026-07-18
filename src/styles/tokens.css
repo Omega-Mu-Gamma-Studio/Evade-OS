@@ -10,6 +10,14 @@
   --font-ui: 'TBD', sans-serif;
   --font-terminal: 'TBD', monospace;
 
+  /* Fallback accent trio for screens that aren't scoped to a realm/zone yet
+     (Home, Settings, Ending). Screens that own a realm/zone context override
+     these locally via useRealmPalette (Section 5) — nothing here is hardcoded
+     into a component, it's just the default before a realm is selected. */
+  --accent-primary: #00CCFF;
+  --accent-secondary: #FFFFFF;
+  --bg-base: #0A0F14;
+
   /* Realm I — The Awakening */
   --realm-1-primary: #00FFAA;
   --realm-1-secondary: #FF00FF;

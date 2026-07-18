@@ -1,7 +1,7 @@
 {
   "id": "5.6",
   "unit": 5,
-  "title": "Mobile OS \u2014 Android",
+  "title": "Mobile OS — Android",
   "zone": null,
   "presentationMode": "visual",
   "phases": [
@@ -15,5 +15,7 @@
     "story": "TBD",
     "normal": "TBD"
   },
-  "content": "TBD"
+  "content": "TBD",
+  "visualComponent": "hotspot-diagram",
+  "terminalInteraction": null
 }
