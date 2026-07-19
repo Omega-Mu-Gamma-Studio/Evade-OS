@@ -1,8 +1,8 @@
 // src/pages/LessonPage.jsx
 // Loads the lesson by :lessonId, sets the realm/zone palette (Section 5), and
 // mounts PhaseContainer. On lesson complete: advance straight to the next
-// lesson in the same zone/realm if one exists; only bounce back to
-// ZoneMap/Hub once the zone/realm itself is finished. 5.7 (final lesson)
+// lesson in the same zone/realm if one exists; only bounce back to the
+// RealmScene/Hub once the zone/realm itself is finished. 5.7 (final lesson)
 // always routes to the Ending regardless.
 import { useNavigate, useParams } from 'react-router-dom';
 import PhaseContainer from '../components/lesson/PhaseContainer.jsx';
@@ -28,7 +28,7 @@ export default function LessonPage() {
     if (next) {
       navigate(`/lesson/${next.id}`);
     } else if (realmHasZones(lesson.unit)) {
-      navigate(`/zone/${lesson.unit}`);
+      navigate(`/realm/${lesson.unit}`);
     } else {
       navigate('/hub');
     }

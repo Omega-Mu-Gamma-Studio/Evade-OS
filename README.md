@@ -65,7 +65,7 @@ src/
 │   └── entities/        Character/entity data
 ├── hooks/             useRealmPalette (Section 5 of UI-IMPLEMENTATION.md)
 ├── utils/             dataService (all JSON loading goes through here), visualizerDispatch
-└── pages/             Route-level screens: Home, HubMap, ZoneMap, LessonPage, Settings, Ending
+└── pages/             Route-level screens: Home, HubMap, RealmScene, LessonPage, Settings, Ending
 ```
 
 `src/styles/tokens.css` holds the shared design tokens; per-realm/zone accent

@@ -1,11 +1,10 @@
 // src/pages/HubMap.jsx
-// Section 1: central hub, "Core Terminal Room". Ported to the SeeDS-style
-// top-down map (SceneFrame + SceneHotspot) instead of the old Konva canvas —
-// one bunker overview scene with all 5 realm doors as hotspots, matching how
-// SeeDS's Campus screen shows every department on one background. Single-zone
-// realms (I, II, V) -> transition -> next lesson. Dual-zone realms (III, IV)
-// -> transition -> ZoneMap.jsx. Mode toggle lives in Settings, not here; hub
-// reflects current mode passively via Kernel-ka's portrait.
+// Section 1: central hub, "Core Terminal Room" — the Realm Map. One bunker
+// overview scene with all 5 realm doors as hotspots, matching how SeeDS's
+// Campus screen shows every department on one background. Every realm ->
+// transition -> RealmScene.jsx (its own 2-3-hotspot scene: a portal or two,
+// plus lore/fun-fact flavor spots). Mode toggle lives in Settings, not
+// here; hub reflects current mode passively via Kernel-ka's portrait.
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SceneFrame from '../components/hub/SceneFrame.jsx';
@@ -16,7 +15,7 @@ import Sidebar from '../components/layout/Sidebar.jsx';
 import RapportPanel from '../components/companion/RapportPanel.jsx';
 import { useRealmPalette } from '../hooks/useRealmPalette.js';
 import {
-  getAllUnits, getUnit, getLessonsForRealm, getFirstIncompleteLesson, realmHasZones,
+  getAllUnits, getUnit, getLessonsForRealm, realmHasZones,
 } from '../utils/dataService.js';
 import { getSceneArt } from '../utils/sceneArt.js';
 import { SCENE_ART } from '../data/hub/sceneArt.js';
@@ -63,12 +62,7 @@ export default function HubMap() {
   const handleTransitionComplete = () => {
     const realmNum = transitionRealm;
     setTransitionRealm(null);
-    if (realmHasZones(realmNum)) {
-      navigate(`/zone/${realmNum}`);
-    } else {
-      const target = getFirstIncompleteLesson(getLessonsForRealm(realmNum), completedLessons);
-      if (target) navigate(`/lesson/${target.id}`);
-    }
+    navigate(`/realm/${realmNum}`);
   };
 
   return (
@@ -86,7 +80,7 @@ export default function HubMap() {
                   key={unit.realmNum}
                   {...REALM_HOTSPOTS[unit.realmNum]}
                   label={`${unit.realmNum}. ${unit.title}`}
-                  sublabel={realmHasZones(unit.realmNum) ? 'Two zones inside' : 'Enter realm'}
+                  sublabel={realmHasZones(unit.realmNum) ? 'Two paths inside' : 'Enter realm'}
                   accent={accent}
                   locked={!unlocked}
                   lockedReason="Clear the previous realm first"
