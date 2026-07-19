@@ -1,15 +1,17 @@
 // src/pages/RealmScene.jsx
 // The "Realm" tier between the Realm Map (Hub) and a lesson. One image per
-// realm, 2-3 hotspots max — this is deliberately NOT a per-lesson map:
+// realm, portal(s) + lore spots — this is deliberately NOT a per-lesson map:
 //   - Portal hotspot(s): the only clickable thing that navigates anywhere.
 //     Clicking one drops the player into their current lesson frontier for
 //     that realm/zone (getFirstIncompleteLesson) — same "resume where you
 //     left off" behavior the old Hub-and-ZoneMap flow already had. Realms
 //     III/IV keep two portals side by side (Gauntlet/Vault, Tower/Archive);
 //     everything else gets one.
-//   - Lore hotspot(s): flavor only. Pops a small panel with a lore entry or
-//     fun fact pulled from the existing systemLog data — no unlock logic,
-//     no navigation. Gives the scene something to click besides "go".
+//   - Lore hotspot(s): flavor only, no unlock logic, no navigation. Realms
+//     I/II/V get one shared pair (fun fact + lore fragment). Realms III/IV
+//     get their own pair PER ZONE (4 total) since each zone has its own
+//     identity worth flavoring separately, rather than one pair sitting
+//     between the two portals.
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import SceneFrame from '../components/hub/SceneFrame.jsx';
@@ -27,15 +29,23 @@ import { useProgressStore } from '../store/progressStore.js';
 
 // Placeholder hotspot boxes — swap once real art exists so each box hugs
 // whatever the portal/lore landmark actually is (a door, a cliff edge, a
-// terminal). See ART-REQUIREMENTS.md.
+// terminal). See ART-REQUIREMENTS.md / ART-PROMPTS.md.
 const PORTAL_SINGLE = { x: 38, y: 30, width: 24, height: 50 };
 const PORTAL_ZONED = [
   { x: 8, y: 24, width: 30, height: 55 },
   { x: 62, y: 24, width: 30, height: 55 },
 ];
+// Single-realm lore pair — tucked into the top corners, out of the portal's way.
 const LORE_SPOTS = [
   { x: 6, y: 8, width: 12, height: 14 },
   { x: 82, y: 8, width: 12, height: 14 },
+];
+// Zoned-realm lore pairs — one pair flanking each zone's own portal
+// (top/bottom of the same side of the frame), so each zone reads as its
+// own little cluster rather than lore floating in neutral territory.
+const LORE_SPOTS_BY_ZONE = [
+  [{ x: 2, y: 4, width: 10, height: 12 }, { x: 2, y: 84, width: 10, height: 12 }],
+  [{ x: 88, y: 4, width: 10, height: 12 }, { x: 88, y: 84, width: 10, height: 12 }],
 ];
 
 export default function RealmScene() {
@@ -80,12 +90,16 @@ export default function RealmScene() {
     if (target) navigate(`/lesson/${target.id}`);
   };
 
-  const showLore = (kind) => {
+  const showLore = (kind, zoneKey = null) => {
     if (kind === 'fact') {
-      const seedLesson = realmLessons[0]?.id ?? `${realmNum}.1`;
+      const pool = zoneKey ? getLessonsForZone(realmNum, zoneKey) : realmLessons;
+      const seedLesson = pool[0]?.id ?? `${realmNum}.1`;
       setLorePanel({ title: 'System log — fun fact', text: getFunFact(seedLesson) });
     } else {
-      const completedCount = Object.keys(completedLessons).length;
+      // Offset by zone index too, so a realm's two zones don't always show
+      // the exact same fragment at the same completion count.
+      const zoneOffset = zoneKey ? zoneKeys.indexOf(zoneKey) : 0;
+      const completedCount = Object.keys(completedLessons).length + zoneOffset;
       const entry = getLoreEntry(completedCount);
       setLorePanel({ title: 'System log — fragment', text: entry?.text ?? 'No fragment recovered yet.' });
     }
@@ -122,28 +136,59 @@ export default function RealmScene() {
         />,
       ];
 
+  const loreSpots = zoned
+    ? zoneKeys.flatMap((zoneKey, zi) => {
+        const zone = unit.zones[zoneKey];
+        const [factBox, loreBox] = LORE_SPOTS_BY_ZONE[zi];
+        return [
+          <SceneHotspot
+            key={`${zoneKey}-fact`}
+            {...factBox}
+            label={`${zone.name} — fun fact`}
+            sublabel="A stray log entry"
+            accent={zone.accent.primary}
+            current={false}
+            onClick={() => showLore('fact', zoneKey)}
+          />,
+          <SceneHotspot
+            key={`${zoneKey}-lore`}
+            {...loreBox}
+            label={`${zone.name} — lore fragment`}
+            sublabel="Something Kernel-ka left behind"
+            accent={zone.accent.primary}
+            current={false}
+            onClick={() => showLore('lore', zoneKey)}
+          />,
+        ];
+      })
+    : [
+        <SceneHotspot
+          key="fact"
+          {...LORE_SPOTS[0]}
+          label="Fun fact"
+          sublabel="A stray log entry"
+          accent="#FFCC00"
+          current={false}
+          onClick={() => showLore('fact')}
+        />,
+        <SceneHotspot
+          key="lore"
+          {...LORE_SPOTS[1]}
+          label="Lore fragment"
+          sublabel="Something Kernel-ka left behind"
+          accent="#FFCC00"
+          current={false}
+          onClick={() => showLore('lore')}
+        />,
+      ];
+
   return (
     <div style={{ ...paletteStyle, minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <TopBar title={`Realm ${realmNum} \u2014 ${unit.realm}`} />
       <div style={{ flex: 1, display: 'flex', padding: '1.25rem' }}>
         <SceneFrame art={realmArt} title={unit.realm} backTo="/hub" backLabel="Back to the bunker">
           {portals}
-          <SceneHotspot
-            {...LORE_SPOTS[0]}
-            label="Fun fact"
-            sublabel="A stray log entry"
-            accent="#FFCC00"
-            current={false}
-            onClick={() => showLore('fact')}
-          />
-          <SceneHotspot
-            {...LORE_SPOTS[1]}
-            label="Lore fragment"
-            sublabel="Something Kernel-ka left behind"
-            accent="#FFCC00"
-            current={false}
-            onClick={() => showLore('lore')}
-          />
+          {loreSpots}
         </SceneFrame>
       </div>
 
