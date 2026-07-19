@@ -1,0 +1,91 @@
+/* src/components/hub/SceneHotspot.css
+   Structural pattern ported from SeeDS's Hotspot.css. The one real
+   difference: every color reads from --hotspot-accent (set inline per
+   instance in SceneHotspot.jsx) instead of a single hardcoded hover color,
+   so each realm/zone hotspot glows its own hue. */
+
+.scene-hotspot {
+  position: absolute;
+}
+
+.scene-hotspot__region {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+  transition: box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.scene-hotspot__region--active:not(.scene-hotspot__region--locked) {
+  background: color-mix(in srgb, var(--hotspot-accent) 10%, transparent);
+  box-shadow:
+    inset 0 0 0 2px color-mix(in srgb, var(--hotspot-accent) 85%, transparent),
+    0 0 18px 2px color-mix(in srgb, var(--hotspot-accent) 30%, transparent);
+}
+
+.scene-hotspot__region--active.scene-hotspot__region--locked {
+  background: rgba(180, 180, 180, 0.06);
+  box-shadow: inset 0 0 0 2px rgba(210, 210, 210, 0.5);
+}
+
+.scene-hotspot__region--locked {
+  cursor: not-allowed;
+}
+
+.scene-hotspot__region:focus-visible {
+  outline: none;
+  box-shadow:
+    inset 0 0 0 2px var(--hotspot-accent),
+    0 0 0 3px color-mix(in srgb, var(--hotspot-accent) 35%, transparent);
+}
+
+.scene-hotspot__region--current {
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--hotspot-accent) 55%, transparent);
+}
+
+.scene-hotspot__pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 2px solid var(--hotspot-accent);
+  animation: scene-hotspot-pulse 1.8s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes scene-hotspot-pulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(1.05); opacity: 0; }
+}
+
+.scene-hotspot__tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(5, 5, 8, 0.92);
+  color: var(--ink-white);
+  border: 1px solid var(--evade-bezel-border);
+  padding: 0.4rem 0.65rem;
+  border-radius: 8px;
+  font-family: var(--font-terminal);
+  font-size: 0.72rem;
+  max-width: 220px;
+  white-space: normal;
+  z-index: 10;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.scene-hotspot__tooltip-title { font-weight: 700; }
+.scene-hotspot__tooltip-sub { opacity: 0.75; margin-top: 0.1rem; font-size: 0.68rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-hotspot__pulse { animation: none; opacity: 0.6; }
+}

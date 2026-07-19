@@ -40,6 +40,22 @@ export function getLessonsForZone(realmNum, zoneKey) {
   return getAllLessons().filter((l) => l.unit === realmNum && l.zone === zoneKey);
 }
 
+/** @returns {object|null} the next lesson after this one within its zone (if
+ *  zoned) or realm (if not) — null if this was the last lesson in that scope. */
+export function getNextLessonInSequence(lesson) {
+  const list = lesson.zone ? getLessonsForZone(lesson.unit, lesson.zone) : getLessonsForRealm(lesson.unit);
+  const idx = list.findIndex((l) => l.id === lesson.id);
+  if (idx === -1 || idx === list.length - 1) return null;
+  return list[idx + 1];
+}
+
+/** @returns {object|null} the first not-yet-completed lesson in `list` (falls
+ *  back to the first lesson if all are complete, e.g. Normal Mode replay). */
+export function getFirstIncompleteLesson(list, completedLessons) {
+  if (list.length === 0) return null;
+  return list.find((l) => !completedLessons[l.id]) ?? list[0];
+}
+
 // --- Units / realms ----------------------------------------------------------
 
 const REALM_TITLES = {

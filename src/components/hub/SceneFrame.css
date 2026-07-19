@@ -1,0 +1,77 @@
+/* src/components/hub/SceneFrame.css
+   Structural pattern ported from SeeDS's SceneFrame.css; colors/type swapped
+   for Evade OS's terminal aesthetic. The bezel/corner-dots/scanline chrome
+   itself comes from the shared .evade-frame class (styles/lessonFrame.css) —
+   this file only adds what's specific to a map scene. */
+
+.hub-scene-frame {
+  width: 100%;
+  flex: 1;
+  display: flex;
+}
+
+.hub-scene-frame__art {
+  position: relative;
+  flex: 1;
+  min-height: 480px;
+}
+
+.hub-scene-frame__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, 0.55) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hub-scene-frame__back {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 6;
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--ink-white);
+  border: 1px solid var(--evade-bezel-border);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.8rem;
+  font-family: var(--font-terminal);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.hub-scene-frame__back:hover {
+  transform: translateX(-2px);
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.hub-scene-frame__heading {
+  position: absolute;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  text-align: center;
+  pointer-events: none;
+}
+.hub-scene-frame__heading h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+}
+.hub-scene-frame__heading p {
+  margin: 0.3em 0 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  color: var(--ink-white);
+}
+
+.hub-scene-frame__hotspots {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+@media (max-width: 720px) {
+  .hub-scene-frame__art { min-height: 420px; }
+}

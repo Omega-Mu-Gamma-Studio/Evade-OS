@@ -40,6 +40,35 @@ is hardcoded per-realm in code. Art should follow the same rule:
 
 ## Asset list (priority order)
 
+### P0a — top-down map scenes (Hub + Zone III/IV select)
+
+Ported the SeeDS `SceneFrame`/`Hotspot` pattern for the Hub and the two
+zoned realms' zone-select screens (`src/components/hub/SceneFrame.jsx`,
+`SceneHotspot.jsx`). Same deal as SeeDS's Campus/Dorm scenes: **one full
+background per scene**, with invisible hotspot boxes positioned over
+whatever's actually drawn in it — not one image per realm.
+
+0. **Hub overview — "Core Terminal Room"** (1 image) — wide shot showing 5
+   distinct doors/terminals/structures, one per realm, arranged so each can
+   get its own hotspot box (currently placeholder percentages in
+   `HubMap.jsx`'s `REALM_HOTSPOTS` — a loose left-to-right scatter; tune
+   these to match wherever the 5 structures actually land in the art). This
+   single image is what makes "each realm has its own art" true — the realms
+   just need to look different *in this one picture*, the same way SeeDS's
+   Campus image shows visibly different buildings without any per-building
+   CSS.
+0b. **Realm III zone-select — "Gauntlet & Vault"** (1 image) — 2 distinct
+   zone doors.
+0c. **Realm IV zone-select — "Tower & Archive"** (1 image) — 2 distinct
+   zone doors.
+
+Until these exist, `getSceneArt()` (`src/utils/sceneArt.js`) renders each
+scene as an accent-tinted CSS gradient instead — one soft color patch per
+realm/zone, so the placeholder isn't just a flat void, but this is not a
+substitute for the real thing. Drop a path into
+`src/data/hub/sceneArt.js` (`SCENE_ART.hub` / `.zone3` / `.zone4`) and the
+gradient is replaced automatically, no other code changes.
+
 ### P0 — needed for the lesson screen to stop feeling blank
 
 1. **Kernel-ka portrait** (1 image) — the rim-light rig in `RapportPanel.jsx`
