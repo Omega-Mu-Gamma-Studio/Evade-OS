@@ -88,12 +88,13 @@
 .evade-dialogue-bar {
   position: relative;
   z-index: 1;
+  min-height: 108px;
   border-top: 1px solid color-mix(in srgb, var(--accent-primary) 25%, transparent);
   background: color-mix(in srgb, var(--accent-primary) 5%, rgba(0, 0, 0, 0.4));
-  padding: 0.85rem 1.1rem;
+  padding: 1.25rem 1.5rem;
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 1.25rem;
   cursor: pointer;
 }
 
